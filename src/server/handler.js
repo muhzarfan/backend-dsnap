@@ -1,9 +1,12 @@
 const { createClient } = require('@supabase/supabase-js');
 require('dotenv').config();
-const multer = require('multer');
-const fileUpload = require('express-fileupload');
+const formidable = require('formidable');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
+const fs = require('fs');
+const { promisify } = require('util');
+
+const readFile = promisify(fs.readFile);
 
 console.log('Handler module loaded');
 
@@ -12,29 +15,19 @@ const supabaseUrl = 'https://xhosbwvwvpnctmprlaay.supabase.co';
 const supabaseKey = process.env.SUPABASE_KEY;
 const supabase = createClient(supabaseUrl, supabaseKey);
 
-// Konfigurasi Multer yang dioptimasi untuk Vercel
-const storage = multer.memoryStorage();
-const upload = multer({
-    storage: storage,
-    limits: {
-        fileSize: 5 * 1024 * 1024, // Batas ukuran file 5MB
-    },
-    fileFilter: (req, file, cb) => {
-        if (file.mimetype.startsWith('image/')) {
-            cb(null, true);
-        } else {
-            cb(new Error('Hanya file gambar yang diizinkan!'));
-        }
-    }
-});
+// Middleware untuk parsing form data
+const parseForm = async (req) => {
+    return new Promise((resolve, reject) => {
+        const form = formidable({
+            maxFileSize: 5 * 1024 * 1024, // 5MB
+        });
 
-// Middleware untuk express-fileupload
-const fileUploadMiddleware = fileUpload({
-    limits: { fileSize: 5 * 1024 * 1024 }, // 5MB limit
-    abortOnLimit: true,
-    responseOnLimit: "File size is too large",
-    debug: true // Enable debugging
-});
+        form.parse(req, (err, fields, files) => {
+            if (err) reject(err);
+            resolve({ fields, files });
+        });
+    });
+};
 
 // Portfolio Handlers
 exports.getPortfolios = async (req, res) => {
@@ -52,98 +45,71 @@ exports.getPortfolioById = async (req, res) => {
 
 exports.createPortfolio = async (req, res) => {
     try {
-        // Gunakan middleware
-        fileUploadMiddleware(req, res, async (err) => {
-            if (err) {
-                console.error('File upload middleware error:', err);
-                return res.status(500).json({ error: err.message });
-            }
+        // Parse form data
+        const { fields, files } = await parseForm(req);
+        
+        console.log('Fields received:', fields);
+        console.log('Files received:', files);
 
-            console.log('Request body:', req.body);
-            console.log('Request files:', req.files);
+        if (!fields.eventName) {
+            return res.status(400).json({ error: 'Event name is required' });
+        }
 
-            // Validasi input
-            if (!req.body.eventName) {
-                return res.status(400).json({ error: 'Event name is required' });
-            }
+        if (!files.imageUrl) {
+            return res.status(400).json({ error: 'Image file is required' });
+        }
 
-            if (!req.files || !req.files.imageUrl) {
-                return res.status(400).json({ error: 'Image file is required' });
-            }
+        // Read file
+        const fileData = await readFile(files.imageUrl.filepath);
+        
+        // Generate unique filename
+        const timestamp = Date.now();
+        const originalName = files.imageUrl.originalFilename;
+        const fileExt = originalName.split('.').pop();
+        const fileName = `${timestamp}-${Math.random().toString(36).substring(7)}.${fileExt}`;
 
-            const imageFile = req.files.imageUrl;
+        // Upload to Supabase
+        const { data: uploadData, error: uploadError } = await supabase.storage
+            .from('gambar-event')
+            .upload(fileName, fileData, {
+                contentType: files.imageUrl.mimetype,
+                cacheControl: '3600'
+            });
 
-            // Validasi tipe file
-            if (!imageFile.mimetype.startsWith('image/')) {
-                return res.status(400).json({ error: 'Only image files are allowed' });
-            }
+        if (uploadError) {
+            console.error('Upload error:', uploadError);
+            return res.status(500).json({ error: 'File upload failed', details: uploadError });
+        }
 
-            // Generate unique filename
-            const timestamp = Date.now();
-            const randomString = Math.random().toString(36).substring(7);
-            const fileExtension = imageFile.name.split('.').pop();
-            const fileName = `${timestamp}-${randomString}.${fileExtension}`;
+        // Get public URL
+        const { data: publicUrlData } = supabase.storage
+            .from('gambar-event')
+            .getPublicUrl(fileName);
 
-            try {
-                // Upload ke Supabase Storage
-                const { data: uploadData, error: uploadError } = await supabase.storage
-                    .from('gambar-event')
-                    .upload(fileName, imageFile.data, {
-                        contentType: imageFile.mimetype,
-                        cacheControl: '3600',
-                        upsert: false
-                    });
+        // Save to database
+        const { data: portfolio, error: dbError } = await supabase
+            .from('portfolios')
+            .insert([{
+                eventName: fields.eventName,
+                imageUrl: publicUrlData.publicUrl
+            }])
+            .select();
 
-                if (uploadError) {
-                    console.error('Supabase upload error:', uploadError);
-                    return res.status(500).json({
-                        error: 'File upload failed',
-                        details: uploadError.message
-                    });
-                }
+        if (dbError) {
+            console.error('Database error:', dbError);
+            return res.status(500).json({ error: 'Database insert failed', details: dbError });
+        }
 
-                // Get public URL
-                const { data: publicUrlData } = supabase.storage
-                    .from('gambar-event')
-                    .getPublicUrl(fileName);
-
-                // Simpan ke database
-                const { data: portfolio, error: dbError } = await supabase
-                    .from('portfolios')
-                    .insert([{
-                        eventName: req.body.eventName,
-                        imageUrl: publicUrlData.publicUrl
-                    }])
-                    .select();
-
-                if (dbError) {
-                    console.error('Database error:', dbError);
-                    return res.status(500).json({
-                        error: 'Database insert failed',
-                        details: dbError.message
-                    });
-                }
-
-                res.status(201).json({
-                    message: 'Portfolio created successfully',
-                    data: portfolio[0]
-                });
-
-            } catch (error) {
-                console.error('Operation error:', error);
-                res.status(500).json({
-                    error: 'Operation failed',
-                    message: error.message,
-                    details: error.stack
-                });
-            }
+        res.status(201).json({
+            message: 'Portfolio created successfully',
+            data: portfolio[0]
         });
+
     } catch (error) {
-        console.error('Outer error:', error);
-        res.status(500).json({
-            error: 'Request failed',
-            message: error.message,
-            details: error.stack
+        console.error('Handler error:', error);
+        res.status(500).json({ 
+            message: 'Internal server error', 
+            error: error.message 
         });
     }
 };
@@ -268,6 +234,13 @@ exports.loginHandler = async (req, res) => {
 
 exports.logout = (req, res) => {
     res.status(200).json({ message: "Logout successful" });
+};
+
+// Export konfigurasi API untuk Vercel
+exports.config = {
+    api: {
+        bodyParser: false,
+    },
 };
 
 // Ekspor Semua Fungsi
