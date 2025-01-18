@@ -27,7 +27,7 @@ class ChatbotHandler {
         },
         {
             "question": "Berapa biaya untuk mengadakan acara?",
-            "answer": "Acara apa yang ingin diselenggarakan? Kami menyediakan acara untuk Perayaan Komunitas, Peluncuran Produk, Konferensi, Konser Musik, Acara Olahraga, dan Acara Kuliner."
+            "answer": "Saat ini, kami hanya menyediakan acara untuk Perayaan Komunitas, Peluncuran Produk, Konferensi, Konser Musik, Acara Olahraga, dan Acara Kuliner. Untuk rincian biaya penyelenggaraan bisakah anda beritahu acara apa yang ingin anda ketahui biayanya?"
         },
         {
             "question": "Apakah layanan tersedia di seluruh Indonesia?",
@@ -110,7 +110,7 @@ class ChatbotHandler {
         },
         {
             "question": "How much does it cost to organize an event?",
-            "answer": "What event would you like to organize? We offer events for Community Celebrations, Product Launches, Corporate Conferences, Music Concerts, Sports Events, and Culinary Events."
+            "answer": "Currently, we only provide events for Community Celebrations, Product Launches, Conferences, Music Concerts, Sports Events, and Culinary Events. For detailed cost information, could you let us know which event you would like to inquire about?"
         },
         {
             "question": "Can D'SNAP! services be provided across all regions in Indonesia?",
