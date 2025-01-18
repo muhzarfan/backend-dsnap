@@ -150,27 +150,27 @@ class ChatbotHandler {
           "answer": "To organize a corporate conference, you can choose the small event option on the Reservation page, with prices starting from IDR 10,000,000.00."
         },
         {
-          "question": "Musical Event",
+          "question": "Musical",
           "answer": "To organize a musical event, you can choose the large event option on the Reservation page, with prices starting from IDR 50,000,000.00."
         },
         {
-          "question": "How much does it cost to organize a musical event?",
+          "question": "How much does it cost to organize a musical ?",
           "answer": "To organize a musical event, you can choose the large event option on the Reservation page, with prices starting from IDR 50,000,000.00."
         },
         {
-          "question": "Sports Event",
+          "question": "Sports",
           "answer": "To organize a sports event, you can choose the medium event option on the Reservation page, with prices starting from IDR 25,000,000.00."
         },
         {
-          "question": "How much does it cost to organize a sports event?",
+          "question": "How much does it cost to organize a sports ?",
           "answer": "To organize a sports event, you can choose the medium event option on the Reservation page, with prices starting from IDR 25,000,000.00."
         },
         {
-          "question": "Culinary Event",
+          "question": "Culinary ",
           "answer": "To organize a culinary event, you can choose the medium event option on the Reservation page, with prices starting from IDR 25,000,000.00."
         },
         {
-          "question": "How much does it cost to organize a culinary event?",
+          "question": "How much does it cost to organize a culinary ?",
           "answer": "To organize a culinary event, you can choose the medium event option on the Reservation page, with prices starting from IDR 25,000,000.00."
         }
       ]
