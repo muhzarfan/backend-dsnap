@@ -1,13 +1,14 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const routes = require('./routes'); // Pastikan path ini benar
+const routes = require('./routes');
 const path = require('path');
 const session = require('express-session');
 const cors = require('cors');
-require('dotenv').config(); // Untuk memuat variabel lingkungan dari file .env
+require('dotenv').config(); 
+const fileUpload = require('express-fileupload');
 
 const app = express();
-const PORT = process.env.PORT || 4000; // Port server
+const PORT = process.env.PORT || 4000; 
 
 // Middleware untuk mengizinkan CORS
 app.use(
@@ -18,6 +19,11 @@ app.use(
     credentials: true, // Mengizinkan pengiriman cookie jika diperlukan
   })
 );
+app.use(express.json());
+app.use(fileUpload({
+    limits: { fileSize: 5 * 1024 * 1024 },
+    abortOnLimit: true
+}));
 
 // Middleware untuk parsing body JSON
 app.use(bodyParser.json({ limit: '10mb' })); // Atur limit sesuai kebutuhan
