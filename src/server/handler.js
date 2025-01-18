@@ -101,7 +101,7 @@ exports.createPortfolio = (req, res) => {
 
 exports.updatePortfolio = (req, res) => {
     const { id } = req.params;
-    upload.single('image')(req, res, async (err) => {
+    upload.single('imageUrl')(req, res, async (err) => {
         if (err) return res.status(500).json({ error: err.message });
 
         const { eventName } = req.body;
