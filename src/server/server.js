@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 4000; // Port server
 // Middleware untuk mengizinkan CORS
 app.use(
   cors({
-    origin: 'http://localhost:3000', // Ganti sesuai dengan domain frontend Anda
+    origin: 'https://snapsindo.vercel.app', // Ganti sesuai dengan domain frontend Anda
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Metode HTTP yang diizinkan
     allowedHeaders: ['Content-Type', 'Authorization'], // Header yang diizinkan
     credentials: true, // Mengizinkan pengiriman cookie
