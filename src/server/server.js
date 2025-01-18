@@ -12,21 +12,19 @@ const PORT = process.env.PORT || 4000; // Port server
 // Middleware untuk mengizinkan CORS
 app.use(
   cors({
-    origin: 'https://snapsindo.vercel.app', // Ganti sesuai dengan domain frontend Anda
+    origin: 'https://snapsindo.vercel.app', // Domain frontend Anda
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Metode HTTP yang diizinkan
     allowedHeaders: ['Content-Type', 'Authorization'], // Header yang diizinkan
-    credentials: true, // Mengizinkan pengiriman cookie
+    credentials: true, // Mengizinkan pengiriman cookie jika diperlukan
   })
 );
 
 // Middleware untuk parsing body JSON
-app.use(bodyParser.json());
-
-// Middleware untuk parsing body URL-encoded
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json({ limit: '10mb' })); // Atur limit sesuai kebutuhan
+app.use(bodyParser.urlencoded({ extended: true, limit: '10mb' })); // Atur limit untuk URL-encoded
 
 // Middleware untuk melayani file statis
-app.use('/uploads', express.static(path.join(__dirname, '../../uploads')));
+app.use('/uploads', express.static(path.join(__dirname, 'uploads'))); // Path disesuaikan jika diperlukan
 
 // Middleware untuk session
 app.use(
@@ -34,12 +32,12 @@ app.use(
     secret: process.env.SESSION_SECRET || 'your_secret_key', // Kunci session
     resave: false,
     saveUninitialized: true,
-    cookie: { secure: false }, // Set ke `true` jika menggunakan HTTPS
+    cookie: { secure: process.env.NODE_ENV === 'production' }, // Secure hanya aktif di HTTPS
   })
 );
 
 // Routes
-app.use('/api', routes);
+app.use('/api', routes); // Pastikan file routes memiliki rute API yang sesuai
 
 // Middleware untuk menangani rute yang tidak ditemukan
 app.use((req, res, next) => {
