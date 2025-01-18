@@ -7,7 +7,12 @@ console.log('Handler module loaded');
 // Konfigurasi Supabase Client
 const supabaseUrl = 'https://xhosbwvwvpnctmprlaay.supabase.co';
 const supabaseKey = process.env.SUPABASE_KEY;
-const supabase = createClient(supabaseUrl, supabaseKey);
+const supabase = createClient(supabaseUrl, supabaseKey, {
+    auth: {
+        autoRefreshToken: false,
+        persistSession: false
+    }
+});
 // Konfigurasi penyimpanan file dengan Multer
 const storage = multer.memoryStorage();
 const upload = multer({
@@ -33,80 +38,100 @@ exports.getPortfolioById = async (req, res) => {
     res.json(data);
 };
 
-exports.createPortfolio = async (req, res) => {
-    try {
+exports.createPortfolio = (req, res) => {
+    upload.single('imageUrl')(req, res, async (err) => {
+        if (err) return res.status(500).json({ error: err.message });
+
         const { eventName } = req.body;
-
-        // Validasi input
         if (!eventName) return res.status(400).json({ error: 'Event name is required' });
-        if (!req.file || !req.file.buffer || !req.file.mimetype) {
-            return res.status(400).json({ error: 'Valid image file is required' });
+
+        if (!req.file) {
+            return res.status(400).json({ error: 'Image file is required' });
         }
 
-        console.log('Request body:', req.body);
-        console.log('Uploaded file info:', req.file);
-
-        // Proses Upload ke Supabase
         try {
-            const fileName = `${Date.now()}_${req.file.originalname}`;
-            const { data: uploadData, error: uploadError } = await supabase.storage
-                .from('gambar-event')
-                .upload(fileName, req.file.buffer, {
-                    contentType: req.file.mimetype,
-                    upsert: true,
+            // Test koneksi database dengan query sederhana
+            const { data: testData, error: testError } = await supabase
+                .from('portfolios')
+                .select('*')
+                .limit(1);
+                
+            if (testError) {
+                console.error('Database connection test error:', testError);
+                return res.status(500).json({ 
+                    error: 'Database connection error', 
+                    details: testError 
                 });
-
-            if (uploadError) {
-                console.error('Error uploading file:', uploadError.message);
-                return res.status(500).json({ error: `Upload error: ${uploadError.message}` });
             }
-        } catch (uploadError) {
-            console.error('Unexpected upload error:', uploadError.message);
-            return res.status(500).json({ error: 'Failed to upload file', details: uploadError.message });
-        }
 
-        // Generate Public URL
-        const { data: publicUrlData } = supabase.storage
-            .from('gambar-event')
-            .getPublicUrl(fileName);
+            const file = req.file;
+            const fileName = `${Date.now()}_${file.originalname}`;
 
-        if (!publicUrlData || !publicUrlData.publicUrl) {
-            return res.status(500).json({ error: 'Failed to generate public URL' });
-        }
-
-        // Simpan ke Database
-        try {
+            // Coba insert data tanpa upload file dulu
             const { data: insertData, error: insertError } = await supabase
                 .from('portfolios')
-                .insert([
-                    {
-                        eventName,
-                        imageUrl: publicUrlData.publicUrl,
-                    },
-                ])
+                .insert([{ 
+                    eventName,
+                    imageUrl: 'temporary_url'
+                }])
                 .select();
 
             if (insertError) {
-                console.error('Error inserting data to database:', insertError.message);
-                return res.status(500).json({ error: `Database error: ${insertError.message}` });
+                console.error('Insert error:', insertError);
+                return res.status(500).json({ 
+                    error: 'Database insert error', 
+                    details: insertError 
+                });
             }
 
-            if (!insertData || insertData.length === 0) {
-                return res.status(500).json({ error: 'Failed to insert data into database' });
+            // Jika insert berhasil, lanjut upload file
+            const { data: uploadData, error: uploadError } = await supabase.storage
+                .from('gambar-event')
+                .upload(fileName, file.buffer, { 
+                    contentType: file.mimetype,
+                    upsert: true 
+                });
+
+            if (uploadError) {
+                console.error('File upload error:', uploadError);
+                return res.status(500).json({ 
+                    error: 'File upload error', 
+                    details: uploadError 
+                });
             }
 
-            res.status(201).json({
+            // Update record dengan URL file yang benar
+            const { data: publicUrlData } = supabase.storage
+                .from('gambar-event')
+                .getPublicUrl(fileName);
+
+            const { data: updateData, error: updateError } = await supabase
+                .from('portfolios')
+                .update({ imageUrl: publicUrlData.publicUrl })
+                .eq('id', insertData[0].id)
+                .select();
+
+            if (updateError) {
+                console.error('Update error:', updateError);
+                return res.status(500).json({ 
+                    error: 'URL update error', 
+                    details: updateError 
+                });
+            }
+
+            res.status(201).json({ 
                 message: 'Portfolio created successfully',
-                data: insertData,
+                data: updateData
             });
-        } catch (insertError) {
-            console.error('Unexpected database error:', insertError.message);
-            res.status(500).json({ error: 'Failed to save portfolio', details: insertError.message });
+
+        } catch (error) {
+            console.error('Unexpected error:', error);
+            res.status(500).json({ 
+                error: 'Unexpected error occurred',
+                details: error.message
+            });
         }
-    } catch (error) {
-        console.error('Unexpected error:', error.message);
-        res.status(500).json({ error: 'Unexpected error occurred', details: error.message });
-    }
+    });
 };
 
 exports.updatePortfolio = (req, res) => {
