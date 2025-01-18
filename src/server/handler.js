@@ -205,4 +205,5 @@ module.exports = {
     deleteOrder: exports.deleteOrder,
     loginHandler: exports.loginHandler,
     logout: exports.logout,
+    uploads,
 };
