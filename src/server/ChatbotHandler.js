@@ -19,7 +19,7 @@ class ChatbotHandler {
         },
         {
           "question": "Layanan Event apa saja yang diselenggarakan oleh D'SNAP! ?",
-          "answer": "Kami berpengalaman dalam mengadakan acara besar seperti peluncuran produk, perayaan komunitas, konser, acara kuliner, dan masih banyak lagi😊."
+          "answer": "Kami berpengalaman dalam mengadakan acara besar seperti peluncuran produk, perayaan komunitas, konser, acara olahraga, dan kuliner😊."
         },
         {
             "question": "Benefit apa saja yang didapatkan?",
@@ -106,7 +106,7 @@ class ChatbotHandler {
         },
         {
             "question": "What kind events does D'SNAP! handle?",
-            "answer": "We have experience in organizing large events such as product launches, community celebrations, concerts, culinary events, and many more😊"
+            "answer": "We have experience in organizing large events such as product launches, community celebrations, concerts, sports events, and culinary events😊"
         },
         {
             "question": "How much does it cost to organize an event?",
