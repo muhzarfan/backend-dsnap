@@ -13,10 +13,10 @@ const PORT = process.env.PORT || 4000;
 // Middleware untuk mengizinkan CORS
 app.use(
   cors({
-    origin: 'https://snapsindo.vercel.app', // Domain frontend Anda
-    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Metode HTTP yang diizinkan
-    allowedHeaders: ['Content-Type', 'Authorization'], // Header yang diizinkan
-    credentials: true, // Mengizinkan pengiriman cookie jika diperlukan
+    origin: 'https://snapsindo.vercel.app', 
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], 
+    allowedHeaders: ['Content-Type', 'Authorization'], 
+    credentials: true, 
   })
 );
 app.use(express.json());
@@ -26,24 +26,24 @@ app.use(fileUpload({
 }));
 
 // Middleware untuk parsing body JSON
-app.use(bodyParser.json({ limit: '10mb' })); // Atur limit sesuai kebutuhan
-app.use(bodyParser.urlencoded({ extended: true, limit: '10mb' })); // Atur limit untuk URL-encoded
+app.use(bodyParser.json({ limit: '10mb' })); 
+app.use(bodyParser.urlencoded({ extended: true, limit: '10mb' })); 
 
 // Middleware untuk melayani file statis
-app.use('/uploads', express.static(path.join(__dirname, 'uploads'))); // Path disesuaikan jika diperlukan
+app.use('/uploads', express.static(path.join(__dirname, 'uploads'))); 
 
 // Middleware untuk session
 app.use(
   session({
-    secret: process.env.SESSION_SECRET || 'your_secret_key', // Kunci session
+    secret: process.env.SESSION_SECRET || 'your_secret_key', 
     resave: false,
     saveUninitialized: true,
-    cookie: { secure: process.env.NODE_ENV === 'production' }, // Secure hanya aktif di HTTPS
+    cookie: { secure: process.env.NODE_ENV === 'production' }, 
   })
 );
 
 // Routes
-app.use('/api', routes); // Pastikan file routes memiliki rute API yang sesuai
+app.use('/api', routes); 
 
 // Middleware untuk menangani rute yang tidak ditemukan
 app.use((req, res, next) => {
