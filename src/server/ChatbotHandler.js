@@ -14,11 +14,11 @@ class ChatbotHandler {
           "answer": "D'SNAP adalah sebuah Event Organizer yang menyediakan berbagai layanan dalam aktivasi acara/brand strategis untuk klien. D'SNAP mulai beroperasi pada bulan Mei 2010 dan kini berlokasi di @ Radio Dalam, Jakarta, dengan 20 karyawan (Divisi Akun, Produksi, Konsep, & Kreatif). Setiap anggota tim berkomitmen untuk memberikan karya berkualitas tinggi yang mencerminkan nilai-nilai inti perusahaan: kreativitas, inovasi, dan kepuasan klien😊"
         },
         {
-            "question": "Kelebihan D'SNAP! ?",
+            "question": "Kelebihan Perusahaan D'SNAP! ?",
             "answer": "Kami percaya bahwa kesuksesan berasal dari kerja tim yang kuat, di mana setiap divisi dalam tim kami berkomitmen untuk pertumbuhan dan kolaborasi, baik secara internal maupun dengan klien kami sebagai mitra. Dengan memahami secara mendalam kebutuhan klien, produk, target pasar, dan tujuan mereka, kami memberikan strategi praktis yang terarah untuk melampaui harapan. Dengan profesionalisme, energi, dan efisiensi, kami merancang solusi komunikasi yang berdampak yang menyeimbangkan efektivitas biaya dan hasil. Dipandu oleh perencanaan yang teliti dan kelincahan, kami tetap fleksibel dan adaptif untuk mengatasi tantangan dan meraih peluang, memastikan hasil terbaik untuk klien kami."
         },
         {
-          "question": "Acara apa yang bisa diselenggarakan oleh D'SNAP! ?",
+          "question": "Layanan Event apa saja yang diselenggarakan oleh D'SNAP! ?",
           "answer": "Kami berpengalaman dalam mengadakan acara besar seperti peluncuran produk, perayaan komunitas, konser, acara kuliner, dan masih banyak lagi😊."
         },
         {
@@ -27,14 +27,14 @@ class ChatbotHandler {
         },
         {
             "question": "Berapa biaya untuk mengadakan acara?",
-            "answer": "Acara apa yang ingin diselenggarakan? Kami menyediakan acara untuk Perayaan Komunitas, Peluncuran Produk, Konferensi Perusahaan, Konser Musik, Acara Olahraga, dan Acara Kuliner."
+            "answer": "Acara apa yang ingin diselenggarakan? Kami menyediakan acara untuk Perayaan Komunitas, Peluncuran Produk, Konferensi, Konser Musik, Acara Olahraga, dan Acara Kuliner."
         },
         {
-            "question": "Apakah layanan D'SNAP! tersedia di seluruh Indonesia?",
+            "question": "Apakah layanan tersedia di seluruh Indonesia?",
             "answer": "Tentu saja, kami telah berhasil menyelenggarakan dan mengelola acara di berbagai kota di Indonesia, menunjukkan kemampuan kami untuk beradaptasi dengan berbagai budaya lokal dan lingkungan bisnis. Pengalaman kami mencakup area metropolitan besar seperti Jakarta, Bandung, Surabaya, Malang, Lampung, dan Medan, serta banyak kota lainnya. Setiap acara dilaksanakan dengan tingkat dedikasi dan perhatian terhadap detail yang sama, memastikan bahwa tujuan klien kami tercapai, tidak peduli lokasi acara. Jangkauan kami yang luas di seluruh Indonesia memungkinkan kami untuk membawa layanan kami kepada berbagai klien, menciptakan pengalaman yang berkesan dan berdampak, disesuaikan dengan karakteristik dan audiens unik di setiap daerah."
         },
         {
-            "question": "Apa keunggulan D'SNAP! ?",
+            "question": "Keunggulan D'SNAP! ?",
             "answer": "Kami percaya bahwa kesuksesan datang dari kerja tim yang kuat, di mana setiap divisi dalam tim kami berkomitmen untuk pertumbuhan dan kolaborasi, baik secara internal maupun dengan klien kami sebagai mitra. Dengan memahami secara mendalam kebutuhan klien, produk, pasar sasaran, dan tujuan mereka, kami memberikan strategi praktis yang berfokus pada target untuk melebihi harapan. Dengan profesionalisme, energi, dan efisiensi, kami menciptakan solusi komunikasi yang berdampak yang menyeimbangkan efektivitas biaya dan hasil. Dipandu oleh perencanaan yang cermat dan kelincahan, kami tetap fleksibel dan adaptif untuk mengatasi tantangan dan meraih peluang, memastikan hasil terbaik bagi klien kami."
         },
         // estimasi biaya
@@ -55,12 +55,12 @@ class ChatbotHandler {
           "answer": "Untuk menyelenggarakan peluncuran produk, Anda dapat memilih opsi acara besar di halaman Reservasi, dengan harga mulai dari IDR 50,000,000.00."
         },
         {
-          "question": "Konferensi Perusahaan",
-          "answer": "Untuk menyelenggarakan konferensi perusahaan, Anda dapat memilih opsi acara kecil di halaman Reservasi, dengan harga mulai dari IDR 10,000,000.00."
+          "question": "Konferensi",
+          "answer": "Untuk menyelenggarakan konferensi, Anda dapat memilih opsi acara kecil di halaman Reservasi, dengan harga mulai dari IDR 10,000,000.00."
         },
         {
-          "question": "Berapa biaya untuk mengadakan konferensi perusahaan ?",
-          "answer": "Untuk menyelenggarakan konferensi perusahaan, Anda dapat memilih opsi acara kecil di halaman Reservasi, dengan harga mulai dari IDR 10,000,000.00."
+          "question": "Berapa biaya untuk mengadakan konferensi ?",
+          "answer": "Untuk menyelenggarakan konferensi konferensi, Anda dapat memilih opsi acara kecil di halaman Reservasi, dengan harga mulai dari IDR 10,000,000.00."
         },
         {
           "question": "Acara Konser Musik",
