@@ -8,7 +8,7 @@ const chatbotHandler = new ChatbotHandler();
 // Routes for portfolio CRUD
 router.get('/portfolio', handler.getPortfolios);
 router.get('/portfolio/:id', handler.getPortfolioById);
-router.post('/portfolio', handler.upload.single('imageUrl'), handler.createPortfolio);
+router.post('/portfolio', handler.createPortfolio);
 router.put('/portfolio/:id', handler.updatePortfolio);
 router.delete('/portfolio/:id', handler.deletePortfolio);
 
