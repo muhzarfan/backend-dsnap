@@ -9,7 +9,7 @@ const supabaseUrl = 'https://xhosbwvwvpnctmprlaay.supabase.co';
 const supabaseKey = process.env.SUPABASE_KEY;
 const supabase = createClient(supabaseUrl, supabaseKey);
 // Konfigurasi penyimpanan file dengan Multer
-const storage = multer.memoryStorage(); 
+const storage = multer.memoryStorage();
 const upload = multer({
     storage,
     limits: { fileSize: 5 * 1024 * 1024 }, 
