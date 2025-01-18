@@ -263,8 +263,8 @@ class ChatbotHandler {
       if (similarities[bestMatchIndex] < 0.1) {
         return {
           response: this.language === 'indonesia'
-            ? "Maaf, saya tidak dapat memahami pertanyaan Anda. Mohon gunakan kata kunci yang sesuai dengan daftar pertanyaan yang tersedia."
-            : "Sorry, I cannot understand your question. Please use keywords that match the available questions list."
+            ? "Maaf, saya tidak dapat memahami pertanyaan Anda. Mohon berikan pertanyaan yang spesifik sesuai opsi yang kami berikan...😊"
+            : "Sorry, I am unable to understand your question. Please provide a specific question according to the options we have provided...😊"
         };
       }
 
