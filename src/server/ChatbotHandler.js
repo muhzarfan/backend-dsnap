@@ -7,19 +7,27 @@ class ChatbotHandler {
       indonesia: [
         {
             "question": "Tentang D'SNAP! ?",
-            "answer": "D'SNAP adalah sebuah Event Organizer yang menyediakan berbagai layanan dalam aktivasi acara/brand strategis untuk klien. D'SNAP mulai beroperasi pada bulan Mei 2010 dan kini berlokasi di @ Radio Dalam, Jakarta, dengan 20 karyawan (Divisi Akun, Produksi, Konsep, & Kreatif). Setiap anggota tim berkomitmen untuk memberikan karya berkualitas tinggi yang mencerminkan nilai-nilai inti perusahaan: kreativitas, inovasi, dan kepuasan klien."
+            "answer": "D'SNAP adalah sebuah Event Organizer yang menyediakan berbagai layanan dalam aktivasi acara/brand strategis untuk klien. D'SNAP mulai beroperasi pada bulan Mei 2010 dan kini berlokasi di @ Radio Dalam, Jakarta, dengan 20 karyawan (Divisi Akun, Produksi, Konsep, & Kreatif). Setiap anggota tim berkomitmen untuk memberikan karya berkualitas tinggi yang mencerminkan nilai-nilai inti perusahaan: kreativitas, inovasi, dan kepuasan klien😊"
+        },
+        {
+          "question": "Apa itu D'SNAP! ?",
+          "answer": "D'SNAP adalah sebuah Event Organizer yang menyediakan berbagai layanan dalam aktivasi acara/brand strategis untuk klien. D'SNAP mulai beroperasi pada bulan Mei 2010 dan kini berlokasi di @ Radio Dalam, Jakarta, dengan 20 karyawan (Divisi Akun, Produksi, Konsep, & Kreatif). Setiap anggota tim berkomitmen untuk memberikan karya berkualitas tinggi yang mencerminkan nilai-nilai inti perusahaan: kreativitas, inovasi, dan kepuasan klien😊"
         },
         {
             "question": "Kelebihan D'SNAP! ?",
             "answer": "Kami percaya bahwa kesuksesan berasal dari kerja tim yang kuat, di mana setiap divisi dalam tim kami berkomitmen untuk pertumbuhan dan kolaborasi, baik secara internal maupun dengan klien kami sebagai mitra. Dengan memahami secara mendalam kebutuhan klien, produk, target pasar, dan tujuan mereka, kami memberikan strategi praktis yang terarah untuk melampaui harapan. Dengan profesionalisme, energi, dan efisiensi, kami merancang solusi komunikasi yang berdampak yang menyeimbangkan efektivitas biaya dan hasil. Dipandu oleh perencanaan yang teliti dan kelincahan, kami tetap fleksibel dan adaptif untuk mengatasi tantangan dan meraih peluang, memastikan hasil terbaik untuk klien kami."
         },
         {
-            "question": "Layanan apa saja yang disediakan D'SNAP! dalam acara?",
-            "answer": "Booth, Perencanaan & Manajemen Acara, Dekorasi & Desain Set, Dukungan Teknologi & AV..."
+          "question": "Acara apa yang bisa diselenggarakan oleh D'SNAP! ?",
+          "answer": "Kami berpengalaman dalam mengadakan acara besar seperti peluncuran produk, perayaan komunitas, konser, acara kuliner, dan masih banyak lagi😊."
         },
         {
-            "question": "Acara apa saja dan berapa biaya untuk mengadakan acara?",
-            "answer": "Silakan pilih acara terlebih dahulu."
+            "question": "Benefit apa saja yang didapatkan?",
+            "answer": "Booth, Perencanaan & Manajemen Acara, Dekorasi & Desain Set, Dukungan Teknologi & AV, Talent & Hiburan, Promosi & Pemasaran Acara, Layanan Katering & Makanan, Pendaftaran & Tiket, dan Fotografi & Videografi Acara."
+        },
+        {
+            "question": "Berapa biaya untuk mengadakan acara?",
+            "answer": "Acara apa yang ingin diselenggarakan? Kami menyediakan acara untuk Perayaan Komunitas, Peluncuran Produk, Konferensi Perusahaan, Konser Musik, Acara Olahraga, dan Acara Kuliner."
         },
         {
             "question": "Apakah layanan D'SNAP! tersedia di seluruh Indonesia?",
@@ -28,36 +36,138 @@ class ChatbotHandler {
         {
             "question": "Apa keunggulan D'SNAP! ?",
             "answer": "Kami percaya bahwa kesuksesan datang dari kerja tim yang kuat, di mana setiap divisi dalam tim kami berkomitmen untuk pertumbuhan dan kolaborasi, baik secara internal maupun dengan klien kami sebagai mitra. Dengan memahami secara mendalam kebutuhan klien, produk, pasar sasaran, dan tujuan mereka, kami memberikan strategi praktis yang berfokus pada target untuk melebihi harapan. Dengan profesionalisme, energi, dan efisiensi, kami menciptakan solusi komunikasi yang berdampak yang menyeimbangkan efektivitas biaya dan hasil. Dipandu oleh perencanaan yang cermat dan kelincahan, kami tetap fleksibel dan adaptif untuk mengatasi tantangan dan meraih peluang, memastikan hasil terbaik bagi klien kami."
+        },
+        // estimasi biaya
+        {
+            "question": "Perayaan Komunitas",
+            "answer": "Untuk menyelenggarakan perayaan komunitas, Anda dapat memilih opsi acara medium di halaman Reservasi, dengan harga mulai dari IDR 25,000,000.00."
+        },
+        {
+          "question": "Berapa biaya untuk mengadakan perayaan komunitas ?",
+          "answer": "Untuk menyelenggarakan perayaan komunitas, Anda dapat memilih opsi acara medium di halaman Reservasi, dengan harga mulai dari IDR 25,000,000.00."
+        },
+        {
+          "question": "Peluncuran Produk",
+          "answer": "Untuk menyelenggarakan peluncuran produk, Anda dapat memilih opsi acara besar di halaman Reservasi, dengan harga mulai dari IDR 50,000,000.00."
+        },
+        {
+          "question": "Berapa biaya untuk mengadakan peluncuran produk ?",
+          "answer": "Untuk menyelenggarakan peluncuran produk, Anda dapat memilih opsi acara besar di halaman Reservasi, dengan harga mulai dari IDR 50,000,000.00."
+        },
+        {
+          "question": "Konferensi Perusahaan",
+          "answer": "Untuk menyelenggarakan konferensi perusahaan, Anda dapat memilih opsi acara kecil di halaman Reservasi, dengan harga mulai dari IDR 10,000,000.00."
+        },
+        {
+          "question": "Berapa biaya untuk mengadakan konferensi perusahaan ?",
+          "answer": "Untuk menyelenggarakan konferensi perusahaan, Anda dapat memilih opsi acara kecil di halaman Reservasi, dengan harga mulai dari IDR 10,000,000.00."
+        },
+        {
+          "question": "Acara Konser Musik",
+          "answer": "Untuk menyelenggarakan acara konser musik, Anda dapat memilih opsi acara besar di halaman Reservasi, dengan harga mulai dari IDR 50,000,000.00."
+        },
+        {
+          "question": "Berapa biaya untuk mengadakan Acara Konser Musik",
+          "answer": "Untuk menyelenggarakan acara konser musik, Anda dapat memilih opsi acara besar di halaman Reservasi, dengan harga mulai dari IDR 50,000,000.00."
+        },
+        {
+          "question": "Acara Olahraga",
+          "answer": "Untuk menyelenggarakan acara olahraga, Anda dapat memilih opsi acara medium di halaman Reservasi, dengan harga mulai dari IDR 25,000,000.00."
+        },
+        {
+          "question": "Berapa biaya untuk mengadakan Acara Olahraga ?",
+          "answer": "Untuk menyelenggarakan acara olahraga, Anda dapat memilih opsi acara medium di halaman Reservasi, dengan harga mulai dari IDR 25,000,000.00."
+        },
+        {
+          "question": "Acara Kuliner",
+          "answer": "Untuk menyelenggarakan acara kuliner, Anda dapat memilih opsi acara medium di halaman Reservasi, dengan harga mulai dari IDR 25,000,000.00."
+        },
+        {
+          "question": "Berapa biaya untuk mengadakan Acara Kuliner",
+          "answer": "Untuk menyelenggarakan acara kuliner, Anda dapat memilih opsi acara medium di halaman Reservasi, dengan harga mulai dari IDR 25,000,000.00."
         }
       ],
       english: [
         {
             "question": "What is D'SNAP! ?",
-            "answer": "D'SNAP is an Event Organizer that provides a multitude of services in strategic event/brand activation for the clients. D'SNAP started its operation in May 2010 and now occupies @ Radio Dalam, Jakarta. with 20 employees (Account, Production, Concept, & Creative Division). Each member is dedicated to delivering high-quality work that embodies the company's core values: creativity, innovation, and client satisfaction."
+            "answer": "D'SNAP is an Event Organizer that provides a multitude of services in strategic event/brand activation for the clients. D'SNAP started its operation in May 2010 and now occupies @ Radio Dalam, Jakarta. with 20 employees (Account, Production, Concept, & Creative Division). Each member is dedicated to delivering high-quality work that embodies the company's core values: creativity, innovation, and client satisfaction😊"
+        },
+        {
+          "question": "About D'SNAP! ?",
+          "answer": "D'SNAP is an Event Organizer that provides a multitude of services in strategic event/brand activation for the clients. D'SNAP started its operation in May 2010 and now occupies @ Radio Dalam, Jakarta. with 20 employees (Account, Production, Concept, & Creative Division). Each member is dedicated to delivering high-quality work that embodies the company's core values: creativity, innovation, and client satisfaction😊"
         },
         {
             "question": "What are D'SNAP!'s strengths?",
             "answer": "We believe that success comes from strong teamwork, where every division in our team is committed to growth and collaboration, both internally and with our clients as partners. By deeply understanding our clients’ needs, products, target market, and goals, we deliver practical, target-driven strategies to exceed expectations. With professionalism, energy, and efficiency, we craft impactful communication solutions that balance cost-effectiveness and results. Guided by meticulous planning and agility, we remain flexible and adaptive to overcome challenges and seize opportunities, ensuring the best outcomes for our clients."
         },
         {
-            "question": "What services does D'SNAP! provide in events?",
-            "answer": "Booth, Event Planning & Management, Decoration & Set Design, Technology & AV Support, Talent & Entertainment, Event Promotion & Marketing, Catering & Food Services, Registration & Ticketing, and Event Photography & Videography"
+            "question": "What benefit does D'SNAP! provide in events?",
+            "answer": "Booth, Event Planning & Management, Set Decoration & Design, Technology & AV Support, Talent & Entertainment, Event Promotion & Marketing, Catering & Food Services, Registration & Tickets, and Event Photography & Videography."
         },
         {
-            "question": "What events does D'SNAP! handle?",
-            "answer": "Please select an event to know its cost."
+            "question": "What kind events does D'SNAP! handle?",
+            "answer": "We have experience in organizing large events such as product launches, community celebrations, concerts, culinary events, and many more😊"
         },
         {
-            "question": "What events does d'snap handle and how much does it cost to organize an event?",
-            "answer": "Please select an event first."
+            "question": "How much does it cost to organize an event?",
+            "answer": "What event would you like to organize? We offer events for Community Celebrations, Product Launches, Corporate Conferences, Music Concerts, Sports Events, and Culinary Events."
         },
         {
             "question": "Can D'SNAP! services be provided across all regions in Indonesia?",
             "answer": "Of course, we have successfully organized and managed events in numerous cities across Indonesia, showcasing our ability to adapt to various local cultures and business environments. Our experience spans major metropolitan areas like Jakarta, Bandung, Surabaya, Malang, Lampung, and Medan, among many others. Each event is executed with the same level of dedication and attention to detail, ensuring that our clients' objectives are met, no matter the location. This extensive reach across the country allows us to bring our services to a wide range of clients, creating memorable and impactful experiences tailored to each region's unique characteristics and audience."
         },
         {
-            "question": "What are D'SNAP!'s strengths?",
+            "question": "What are D'SNAP!'s advantage?",
             "answer": "We believe that success comes from strong teamwork, where every division in our team is committed to growth and collaboration, both internally and with our clients as partners. By deeply understanding our clients’ needs, products, target market, and goals, we deliver practical, target-driven strategies to exceed expectations. With professionalism, energy, and efficiency, we craft impactful communication solutions that balance cost-effectiveness and results. Guided by meticulous planning and agility, we remain flexible and adaptive to overcome challenges and seize opportunities, ensuring the best outcomes for our clients."
+        },
+        // cost
+        {
+          "question": "Community Celebration",
+          "answer": "To organize a community celebration, you can choose the medium event option on the Reservation page, with prices starting from IDR 25,000,000.00."
+        },
+        {
+          "question": "How much does it cost to organize a community celebration?",
+          "answer": "To organize a community celebration, you can choose the medium event option on the Reservation page, with prices starting from IDR 25,000,000.00."
+        },
+        {
+          "question": "Product Launch",
+          "answer": "To organize a product launch, you can choose the large event option on the Reservation page, with prices starting from IDR 50,000,000.00."
+        },
+        {
+          "question": "How much does it cost to organize a product launch?",
+          "answer": "To organize a product launch, you can choose the large event option on the Reservation page, with prices starting from IDR 50,000,000.00."
+        },
+        {
+          "question": "Corporate Conference",
+          "answer": "To organize a corporate conference, you can choose the small event option on the Reservation page, with prices starting from IDR 10,000,000.00."
+        },
+        {
+          "question": "How much does it cost to organize a corporate conference?",
+          "answer": "To organize a corporate conference, you can choose the small event option on the Reservation page, with prices starting from IDR 10,000,000.00."
+        },
+        {
+          "question": "Musical Event",
+          "answer": "To organize a musical event, you can choose the large event option on the Reservation page, with prices starting from IDR 50,000,000.00."
+        },
+        {
+          "question": "How much does it cost to organize a musical event?",
+          "answer": "To organize a musical event, you can choose the large event option on the Reservation page, with prices starting from IDR 50,000,000.00."
+        },
+        {
+          "question": "Sports Event",
+          "answer": "To organize a sports event, you can choose the medium event option on the Reservation page, with prices starting from IDR 25,000,000.00."
+        },
+        {
+          "question": "How much does it cost to organize a sports event?",
+          "answer": "To organize a sports event, you can choose the medium event option on the Reservation page, with prices starting from IDR 25,000,000.00."
+        },
+        {
+          "question": "Culinary Event",
+          "answer": "To organize a culinary event, you can choose the medium event option on the Reservation page, with prices starting from IDR 25,000,000.00."
+        },
+        {
+          "question": "How much does it cost to organize a culinary event?",
+          "answer": "To organize a culinary event, you can choose the medium event option on the Reservation page, with prices starting from IDR 25,000,000.00."
         }
       ]
     };
