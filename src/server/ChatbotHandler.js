@@ -224,6 +224,46 @@ class ChatbotHandler {
         {
           "question": "How much does it cost to organize a culinary ?",
           "answer": "To organize a culinary event, you can choose the medium event option on the Reservation page, with prices starting from IDR 25,000,000.00."
+        },
+        {
+          "question": "Does D'SNAP provide pre-event consultation services?",
+          "answer": "Yes, D'SNAP provides consultation services, please contact the contact listed. Our team will help design an event concept that suits your vision."
+        },
+        {
+          "question": "Does D'SNAP provide event documentation services?",
+          "answer": "Of course, we provide event documentation services such as professional photography and videography to ensure your important moments are well documented."
+        },
+        {
+          "question": "Does D'SNAP offer graphic design services for events?",
+          "answer": "Yes, we offer graphic design services to support promotional materials and event visuals, such as invitations, posters, backdrops, and other materials."
+        },
+        {
+          "question": "Can D'SNAP handle virtual or hybrid events?",
+          "answer": "Yes, D'SNAP has experience in managing virtual and hybrid events. We provide appropriate technology solutions, including live streaming, interactive platforms, and social media integration."
+        },
+        {
+          "question": "Does D'SNAP have a network of event support vendors?",
+          "answer": "Yes, we have a network of trusted vendors for various event needs, such as catering, decoration, audiovisual equipment, and others."
+        },
+        {
+          "question": "How long does it take to prepare an event?",
+          "answer": "The preparation time depends on the scale and complexity of the event. For small to medium events, it usually takes 2-4 weeks. While large events can take 1-3 months."
+        },
+        {
+          "question": "Does D'SNAP offer ready-made event packages?",
+          "answer": "Yes, we provide pre-designed event packages to make it easier for you, such as product launch packages, community parties, and music concerts. You can find the details on the reservation page."
+        },
+        {
+          "question": "Can I customize an event package at D'SNAP?",
+          "answer": "Of course! You can consult with our team to design an event package that suits your needs and budget."
+        },
+        {
+          "question": "How does D'SNAP handle challenges or sudden changes during an event?",
+          "answer": "We have an experienced and responsive team to handle any challenges or sudden changes with quick and effective solutions for the success of your event."
+        },
+        {
+          "question": "What sets D'SNAP apart from other event organizers?",
+          "answer": "Our strength lies in our creativity, dedication, and experience in managing various types of events. We always prioritize client satisfaction by providing innovative event solutions and results that exceed expectations."
         }
       ]
     };
