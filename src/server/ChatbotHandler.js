@@ -190,6 +190,66 @@ class ChatbotHandler {
           "answer": "D'SNAP is an Event Organizer that provides a multitude of services in strategic event/brand activation for the clients. D'SNAP started its operation in May 2010 and now occupies @ Radio Dalam, Jakarta. with 20 employees (Account, Production, Concept, & Creative Division). Each member is dedicated to delivering high-quality work that embodies the company's core values: creativity, innovation, and client satisfaction😊"
         },
         {
+          "question": "What is the process for organizing an event with D'SNAP?",
+          "answer": "To organize an event with D'SNAP, simply contact us for an initial consultation. We will discuss your needs, budget, and preferences, and then create a customized plan for your event. After approval, we manage all aspects of the event planning and execution."
+        },
+        {
+          "question": "How can D'SNAP help with event marketing?",
+          "answer": "D'SNAP offers comprehensive event marketing services, including social media promotion, email marketing, influencer partnerships, and media relations. We work with you to develop a marketing strategy that increases visibility and attendance for your event."
+        },
+        {
+          "question": "Does D'SNAP handle the logistics of event transportation?",
+          "answer": "Yes, D'SNAP manages all transportation logistics, including arranging for guest travel, shuttle services, and managing transportation schedules to ensure that attendees arrive on time and comfortably."
+        },
+        {
+          "question": "Can D'SNAP provide live entertainment for events?",
+          "answer": "Yes, D'SNAP has a network of entertainers, including musicians, DJs, performers, and speakers. We can arrange live entertainment that fits your event's theme and atmosphere, ensuring a memorable experience for your guests."
+        },
+        {
+          "question": "Does D'SNAP assist with event budgeting?",
+          "answer": "Yes, D'SNAP works closely with clients to create a realistic and transparent budget for each event. We help prioritize expenses, recommend cost-saving solutions, and ensure that your event stays within the budget without compromising quality."
+        },
+        {
+          "question": "Can D'SNAP offer virtual event services?",
+          "answer": "Yes, D'SNAP provides full virtual event planning services, including platform selection, live streaming, audience interaction features, and technical support to ensure a smooth and engaging online experience for your attendees."
+        },
+        {
+          "question": "Does D'SNAP offer team-building activities for corporate events?",
+          "answer": "Yes, D'SNAP can incorporate team-building activities into your corporate events, providing a range of interactive experiences designed to improve communication, collaboration, and employee engagement."
+        },
+        {
+          "question": "How does D'SNAP handle event coordination on the day of the event?",
+          "answer": "On the day of the event, D'SNAP's team ensures smooth coordination by overseeing all event logistics, including guest arrivals, speaker management, technical setup, and troubleshooting, ensuring everything runs as planned."
+        },
+        {
+          "question": "Does D'SNAP offer event photography and videography services?",
+          "answer": "Yes, D'SNAP provides professional event photography and videography services to capture key moments of your event. Our team ensures high-quality visuals that can be used for marketing, social media, or personal keepsakes."
+        },
+        {
+          "question": "Can D'SNAP provide custom event themes and decorations?",
+          "answer": "Yes, D'SNAP offers custom event theme design and decorations. Whether it’s a corporate event, wedding, or festival, we can create unique, branded environments that reflect the spirit and objectives of your event."
+        },
+        {
+          "question": "Does D'SNAP provide event safety and security services?",
+          "answer": "Yes, D'SNAP can arrange for event safety and security services, including crowd management, emergency response planning, and on-site security personnel to ensure the safety of all attendees."
+        },
+        {
+          "question": "How can D'SNAP assist with event follow-up and feedback collection?",
+          "answer": "After your event, D'SNAP assists with gathering attendee feedback through surveys and follow-up communications. This helps assess the success of the event and gather insights for future improvements."
+        },
+        {
+          "question": "Can D'SNAP provide event catering services?",
+          "answer": "Yes, D'SNAP offers event catering services, with a wide range of menu options to suit different dietary needs and preferences. Our catering services ensure that food and beverages enhance the overall experience of your event."
+        },
+        {
+          "question": "How does D'SNAP handle unforeseen challenges during events?",
+          "answer": "D'SNAP is prepared to handle unforeseen challenges with flexibility and professionalism. Our team quickly addresses any issues that arise, ensuring that the event continues smoothly without any disruption."
+        },
+        {
+          "question": "Does D'SNAP offer post-event content creation services?",
+          "answer": "Yes, D'SNAP offers post-event content creation, including highlight videos, social media posts, and photo albums to share the success of your event with your audience and keep the engagement going after the event."
+        },
+        {
             "question": "What are D'SNAP!'s strengths?",
             "answer": "We believe that success comes from strong teamwork, where every division in our team is committed to growth and collaboration, both internally and with our clients as partners. By deeply understanding our clients’ needs, products, target market, and goals, we deliver practical, target-driven strategies to exceed expectations. With professionalism, energy, and efficiency, we craft impactful communication solutions that balance cost-effectiveness and results. Guided by meticulous planning and agility, we remain flexible and adaptive to overcome challenges and seize opportunities, ensuring the best outcomes for our clients."
         },
