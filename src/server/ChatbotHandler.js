@@ -6,7 +6,16 @@ class ChatbotHandler {
     this.data = {
       indonesia: [
         {
-            "question": "Tentang D'SNAP! ?",
+            "question":[ "Tentang D'SNAP! ?",
+                        "Siapa D'SNAP! ?",
+                        "Bisa jelaskan apa itu D'SNAP! ?",
+                        "Apa itu D'SNAP! ?",
+                        "Bagaimana D'SNAP! bekerja?",
+                        "Kapan D'SNAP! mulai beroperasi?",
+                        "Dimana lokasi D'SNAP! ?",
+                        "Berapa jumlah karyawan D'SNAP! ?",
+                        "Apa nilai inti D'SNAP! ?"
+                       ],
             "answer": "D'SNAP adalah sebuah Event Organizer yang menyediakan berbagai layanan dalam aktivasi acara/brand strategis untuk klien. D'SNAP mulai beroperasi pada bulan Mei 2010 dan kini berlokasi di @ Radio Dalam, Jakarta, dengan 20 karyawan (Divisi Akun, Produksi, Konsep, & Kreatif). Setiap anggota tim berkomitmen untuk memberikan karya berkualitas tinggi yang mencerminkan nilai-nilai inti perusahaan: kreativitas, inovasi, dan kepuasan klien😊"
         },
         {
