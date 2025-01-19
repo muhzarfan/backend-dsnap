@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 4000; // Port server
 // Middleware untuk mengizinkan CORS
 app.use(
   cors({
-    origin: 'https://snapsindo.vercel.app/', 
+    origin: 'https://backend-dsnap.vercel.app/', 
     methods: ['GET', 'POST', 'PUT', 'DELETE'], 
     allowedHeaders: ['Content-Type', 'Authorization'], 
     credentials: true, 
