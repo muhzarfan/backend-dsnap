@@ -2,6 +2,7 @@ const { createClient } = require('@supabase/supabase-js');
 require('dotenv').config();
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
+const fileUpload = require('express-fileupload');
 
 // Konfigurasi Supabase Client
 const supabaseUrl = 'https://xhosbwvwvpnctmprlaay.supabase.co';
@@ -11,11 +12,19 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 // Portfolio Handlers
 exports.getPortfolios = async (req, res) => {
     try {
-        const { data, error } = await supabase.from('portfolios').select('*');
+        const { data, error } = await supabase
+            .from('portfolios')
+            .select('*')
+            .order('created_at', { ascending: false });
+            
         if (error) throw error;
         res.json(data);
     } catch (error) {
-        res.status(500).json({ error: error.message });
+        res.status(500).json({ 
+            status: 'error', 
+            message: 'Gagal mengambil data portfolio',
+            error: error.message 
+        });
     }
 };
 
@@ -29,26 +38,44 @@ exports.getPortfolioById = async (req, res) => {
             .single();
             
         if (error) {
-            return res.status(404).json({ message: 'Portfolio not found' });
+            return res.status(404).json({ 
+                status: 'error',
+                message: 'Portfolio tidak ditemukan' 
+            });
         }
-        res.json(data);
+        res.json({
+            status: 'success',
+            data: data
+        });
     } catch (error) {
-        res.status(500).json({ error: error.message });
+        res.status(500).json({ 
+            status: 'error',
+            message: 'Gagal mengambil detail portfolio',
+            error: error.message 
+        });
     }
 };
 
 exports.createPortfolio = async (req, res) => {
     try {
-        const { eventName } = req.body;
-        const imageFile = req.files?.image;
-
-        if (!eventName || !imageFile) {
+        if (!req.files || !req.files.image) {
             return res.status(400).json({
                 status: 'error',
-                message: 'Event name dan image harus diisi'
+                message: 'File gambar harus diupload'
             });
         }
 
+        const { eventName } = req.body;
+        const imageFile = req.files.image;
+
+        if (!eventName) {
+            return res.status(400).json({
+                status: 'error',
+                message: 'Nama event harus diisi'
+            });
+        }
+
+        // Validasi ukuran file
         if (imageFile.size > 5 * 1024 * 1024) {
             return res.status(400).json({
                 status: 'error',
@@ -56,6 +83,7 @@ exports.createPortfolio = async (req, res) => {
             });
         }
 
+        // Validasi tipe file
         const allowedTypes = ['image/jpeg', 'image/jpg', 'image/png'];
         if (!allowedTypes.includes(imageFile.mimetype)) {
             return res.status(400).json({
@@ -64,31 +92,47 @@ exports.createPortfolio = async (req, res) => {
             });
         }
 
-        const fileName = `${Date.now()}-${imageFile.name}`;
+        // Generate unique filename
+        const fileExt = imageFile.name.split('.').pop();
+        const fileName = `${Date.now()}-${Math.random().toString(36).substr(2, 9)}.${fileExt}`;
 
+        // Upload ke Supabase Storage
         const { data: uploadData, error: uploadError } = await supabase.storage
             .from('gambar-event')
             .upload(fileName, imageFile.data, {
-                contentType: imageFile.mimetype
+                contentType: imageFile.mimetype,
+                cacheControl: '3600'
             });
 
-        if (uploadError) throw uploadError;
+        if (uploadError) {
+            console.error('Upload error:', uploadError);
+            throw new Error('Gagal mengupload gambar');
+        }
 
+        // Dapatkan URL publik
         const { data: { publicUrl } } = supabase.storage
             .from('gambar-event')
             .getPublicUrl(fileName);
 
+        // Simpan ke database
         const { data: portfolioData, error: portfolioError } = await supabase
             .from('portfolios')
-            .insert([{ eventName, imageUrl: publicUrl }])
+            .insert([{ 
+                eventName, 
+                imageUrl: publicUrl,
+                created_at: new Date().toISOString()
+            }])
             .select();
 
-        if (portfolioError) throw portfolioError;
+        if (portfolioError) {
+            console.error('Database error:', portfolioError);
+            throw new Error('Gagal menyimpan data portfolio');
+        }
 
         res.status(201).json({
             status: 'success',
             message: 'Portfolio berhasil dibuat',
-            data: portfolioData
+            data: portfolioData[0]
         });
 
     } catch (error) {
@@ -105,11 +149,24 @@ exports.updatePortfolio = async (req, res) => {
     try {
         const { id } = req.params;
         const { eventName } = req.body;
-        const imageFile = req.files?.image;
+        
+        if (!eventName) {
+            return res.status(400).json({
+                status: 'error',
+                message: 'Nama event harus diisi'
+            });
+        }
 
-        let updateData = { eventName };
+        let updateData = { 
+            eventName,
+            updated_at: new Date().toISOString()
+        };
 
-        if (imageFile) {
+        // Jika ada file baru
+        if (req.files && req.files.image) {
+            const imageFile = req.files.image;
+
+            // Validasi ukuran
             if (imageFile.size > 5 * 1024 * 1024) {
                 return res.status(400).json({
                     status: 'error',
@@ -117,6 +174,7 @@ exports.updatePortfolio = async (req, res) => {
                 });
             }
 
+            // Validasi tipe
             const allowedTypes = ['image/jpeg', 'image/jpg', 'image/png'];
             if (!allowedTypes.includes(imageFile.mimetype)) {
                 return res.status(400).json({
@@ -125,39 +183,64 @@ exports.updatePortfolio = async (req, res) => {
                 });
             }
 
-            const fileName = `${Date.now()}-${imageFile.name}`;
+            // Generate filename
+            const fileExt = imageFile.name.split('.').pop();
+            const fileName = `${Date.now()}-${Math.random().toString(36).substr(2, 9)}.${fileExt}`;
 
+            // Upload file baru
             const { error: uploadError } = await supabase.storage
                 .from('gambar-event')
                 .upload(fileName, imageFile.data, {
-                    contentType: imageFile.mimetype
+                    contentType: imageFile.mimetype,
+                    cacheControl: '3600'
                 });
 
-            if (uploadError) throw uploadError;
+            if (uploadError) {
+                console.error('Upload error:', uploadError);
+                throw new Error('Gagal mengupload gambar');
+            }
 
+            // Get URL baru
             const { data: { publicUrl } } = supabase.storage
                 .from('gambar-event')
                 .getPublicUrl(fileName);
 
             updateData.imageUrl = publicUrl;
+
+            // Hapus file lama jika perlu
+            const { data: oldData } = await supabase
+                .from('portfolios')
+                .select('imageUrl')
+                .eq('id', id)
+                .single();
+
+            if (oldData?.imageUrl) {
+                const oldFileName = oldData.imageUrl.split('/').pop();
+                await supabase.storage
+                    .from('gambar-event')
+                    .remove([oldFileName]);
+            }
         }
 
-        const { error } = await supabase
+        // Update database
+        const { data, error } = await supabase
             .from('portfolios')
             .update(updateData)
-            .eq('id', id);
+            .eq('id', id)
+            .select();
 
         if (error) throw error;
 
         res.json({ 
             status: 'success',
-            message: 'Portfolio updated successfully' 
+            message: 'Portfolio berhasil diupdate',
+            data: data[0]
         });
     } catch (error) {
         console.error('Update portfolio error:', error);
         res.status(500).json({ 
             status: 'error',
-            message: 'Failed to update portfolio',
+            message: 'Gagal mengupdate portfolio',
             error: error.message 
         });
     }
@@ -166,11 +249,38 @@ exports.updatePortfolio = async (req, res) => {
 exports.deletePortfolio = async (req, res) => {
     try {
         const { id } = req.params;
-        const { error } = await supabase.from('portfolios').delete().eq('id', id);
+
+        // Get image URL before deleting
+        const { data: portfolio } = await supabase
+            .from('portfolios')
+            .select('imageUrl')
+            .eq('id', id)
+            .single();
+
+        if (portfolio?.imageUrl) {
+            const fileName = portfolio.imageUrl.split('/').pop();
+            await supabase.storage
+                .from('gambar-event')
+                .remove([fileName]);
+        }
+
+        const { error } = await supabase
+            .from('portfolios')
+            .delete()
+            .eq('id', id);
+
         if (error) throw error;
-        res.json({ message: 'Portfolio deleted successfully' });
+
+        res.json({ 
+            status: 'success',
+            message: 'Portfolio berhasil dihapus' 
+        });
     } catch (error) {
-        res.status(500).json({ error: error.message });
+        res.status(500).json({ 
+            status: 'error',
+            message: 'Gagal menghapus portfolio',
+            error: error.message 
+        });
     }
 };
 
