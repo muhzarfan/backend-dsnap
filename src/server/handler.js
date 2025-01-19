@@ -8,18 +8,6 @@ const supabaseUrl = 'https://xhosbwvwvpnctmprlaay.supabase.co';
 const supabaseKey = process.env.SUPABASE_KEY;
 const supabase = createClient(supabaseUrl, supabaseKey)
 
-// Konfigurasi penyimpanan file dengan Multer
-const storage = multer.memoryStorage();
-const upload = multer({
-    storage,
-    limits: { fileSize: 5 * 1024 * 1024 },
-    fileFilter: (req, file, cb) => {
-        if (!file.mimetype.startsWith('image/')) {
-            return cb(new Error('Only image files are allowed!'), false);
-        }
-        cb(null, true);
-    },
-});
 // Portfolio Handlers
 exports.getPortfolios = async (req, res) => {
     const { data, error } = await supabase.from('portfolios').select('*');
