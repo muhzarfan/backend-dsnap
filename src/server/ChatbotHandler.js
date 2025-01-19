@@ -85,6 +85,14 @@ class ChatbotHandler {
         {
           "question": "Berapa biaya untuk mengadakan Acara Kuliner",
           "answer": "Untuk menyelenggarakan acara kuliner, Anda dapat memilih opsi acara medium di halaman Reservasi, dengan harga mulai dari IDR 25,000,000.00."
+        },
+        {
+          "question": "Bagaimana cara booking event ?",
+          "answer": "Anda bisa ke halaman reservasi untuk informasi lebih lengkap atau juga bisa menghubungi kontak yang tertera."
+        },
+        {
+          "question": "Bagaimana cara memesan jasa ?",
+          "answer": "Anda bisa ke halaman reservasi untuk informasi lebih lengkap atau juga bisa menghubungi kontak yang tertera."
         }
       ],
       english: [
