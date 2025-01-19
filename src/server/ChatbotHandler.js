@@ -457,6 +457,101 @@ class ChatbotHandler {
         {
           "question": "What sets D'SNAP apart from other event organizers?",
           "answer": "Our strength lies in our creativity, dedication, and experience in managing various types of events. We always prioritize client satisfaction by providing innovative event solutions and results that exceed expectations."
+        },
+        {
+          "question": "How much does it cost to hire a service",
+          "answer": "Currently, we only provide events for Community Celebrations, Product Launches, Conferences, Music Concerts, Sports Events, and Culinary Events. For details on the cost of organizing, can you tell us what event you want to know the cost of?"
+        },
+        {
+          "question": "What are the major projects that D'SNAP has handled?",
+          "answer": "D'SNAP provides services for various types of events, including Community Celebrations, Product Launches, Conferences, Music Concerts, Sports Events, and Culinary Events. To see the major projects that we have handled, please visit the Projects page!"
+        },
+        {
+          "question": "Have you ever handled an event like this before?",
+          "answer": "For now, we only provide events for Community Celebrations, Product Launches, Conferences, Music Concerts, Sports Events, and Culinary Events. For details on the cost of organizing, can you tell us what event you want to know the cost of? If you want more complete information, please contact us"
+        },
+        {
+          "question": "Can I see examples of events that you have worked on?",
+          "answer": "You can try to go to the projects page for events that we have worked on!"
+        },
+        {
+          "question": "What do you usually provide? Decorations, food, entertainment, or all complete?",
+          "answer": "We provide Booths, Event Planning & Management, Decoration & Set Design, Technology & AV Support, Talent & Entertainment, Event Promotion & Marketing, Catering & Food Services, Registration & Ticketing, and Event Photography & Videography."
+        },
+        {
+          "question": "Can I choose my own vendor?",
+          "answer": "I'm sorry, I can't choose my own vendor"
+        },
+        {
+          "question": "Is there a price package that can be adjusted to your budget?",
+          "answer": "We provide Small, Medium, and Big Packages, for budgeting please contact us!"
+        },
+        {
+          "question": "Is the cost all-in, or are there any additional costs?",
+          "answer": "The cost of each package starts from the Small, Medium, and Big Packages, if you want more details please contact us!"
+        },
+        {
+          "question": "What is the payment system? Down payment first or pay in full later?",
+          "answer": "For the payment system, can I pay the down payment first!"
+        },
+        {
+          "question": "If there are sudden changes, is it easy to contact you?",
+          "answer": "Of course, we are very responsive if there are obstacles in the event!" },
+        {
+          "question": "How many people will be on the team on the day?",
+          "answer": "We provide a Team Leader and Crew who will always be ready to help, the crew who will be there will adjust to the event that has been ordered!"
+        },
+        {
+          "question": "If there is a problem at the event, you have a backup plan, right?",
+          "answer": "Of course, we always provide backup plans if there is a problem at the event!"
+        },
+        {
+          "question": "What are the reviews or testimonials from previous clients regarding the services provided?",
+          "answer": "For the results of events that have been worked on, you can see them on the projects page, but for testimonials, you can contact us for further contact"
+        },
+        {
+          "question": "Are you open to receiving our creative ideas during planning?",
+          "answer": "Yes, of course you are always open to receiving creative ideas in any form"
+        },
+        {
+          "question": "Can you help design a unique event theme or concept?",
+          "answer": "Of course, all concepts and themes will be handled by our company's creative and production!"
+        },
+        {
+          "question": "Are there any packages or services that we can choose according to our needs?",
+          "answer": "We provide Small, Medium, and Big Packages, for budgeting please contact us!"
+        },
+        {
+          "question": "Do you work with other vendors such as catering, decoration, or photographers?",
+          "answer": "Yes, we have a network of trusted vendors for various event needs, such as catering, decoration, audiovisual equipment, and others."
+        },
+        {
+          "question": "How do you handle unexpected problems during an event?",
+          "answer": "We have an experienced and responsive team to handle any challenges or sudden changes with quick and effective solutions for the success of your event."
+        },
+        {
+          "question": "How flexible is your team in adjusting the decoration to our wishes?",
+          "answer": "Our team is very flexible, if there is a design that is not suitable then we will make it according to your wishes."
+        },
+        {
+          "question": "What are the benefits if we order EO services?",
+          "answer": "Booth, Event Planning & Management, Set Decoration & Design, Technology & AV Support, Talent & Entertainment, Event Promotion & Marketing, Catering & Food Services, Registration & Tickets, and Event Photography & Videography."
+        },
+        {
+          "question": "How does EO handle problems during the event?",
+          "answer": "We have a competent and experienced team leader who can handle any problems that occur!"
+        },
+        {
+          "question": "Does EO guarantee security during the event?",
+          "answer": "Of course, because security is one of our top priorities as an event organizer"
+        },
+        {
+          "question": "Can you do everything that is requested, with how much money?",
+          "answer": "We provide Small, Medium, and Big Packages, for budgeting please contact us!"
+        },
+        {
+          "question": "Hello, I want to use the services of an event organizer, what facilities are available for an event that can be attended by approximately 1000 visitors and how much is the exact cost?",
+          "answer": "We provide Small, Medium, and Big Packages. For more information, you can go to the Reservation page or please contact us!"
         }
       ]
     };
