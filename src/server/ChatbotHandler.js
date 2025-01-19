@@ -6,17 +6,48 @@ class ChatbotHandler {
     this.data = {
       indonesia: [
         {
-            "question":[ "Tentang D'SNAP! ?",
-                        "Siapa D'SNAP! ?",
-                        "Bisa jelaskan apa itu D'SNAP! ?",
-                        "Apa itu D'SNAP! ?",
-                        "Bagaimana D'SNAP! bekerja?",
-                        "Kapan D'SNAP! mulai beroperasi?",
-                        "Dimana lokasi D'SNAP! ?",
-                        "Berapa jumlah karyawan D'SNAP! ?",
-                        "Apa nilai inti D'SNAP! ?"
-                       ],
+            "question": "Tentang D'SNAP! ?",
             "answer": "D'SNAP adalah sebuah Event Organizer yang menyediakan berbagai layanan dalam aktivasi acara/brand strategis untuk klien. D'SNAP mulai beroperasi pada bulan Mei 2010 dan kini berlokasi di @ Radio Dalam, Jakarta, dengan 20 karyawan (Divisi Akun, Produksi, Konsep, & Kreatif). Setiap anggota tim berkomitmen untuk memberikan karya berkualitas tinggi yang mencerminkan nilai-nilai inti perusahaan: kreativitas, inovasi, dan kepuasan klien😊"
+        },
+        {
+            "question": "Apa yang dimaksud dengan D'SNAP! ?",
+            "answer": "D'SNAP adalah sebuah Event Organizer yang menyediakan berbagai layanan dalam aktivasi acara/brand strategis untuk klien. D'SNAP mulai beroperasi pada bulan Mei 2010 dan kini berlokasi di @ Radio Dalam, Jakarta, dengan 20 karyawan (Divisi Akun, Produksi, Konsep, & Kreatif). Setiap anggota tim berkomitmen untuk memberikan karya berkualitas tinggi yang mencerminkan nilai-nilai inti perusahaan: kreativitas, inovasi, dan kepuasan klien😊"
+        },
+        {
+            "question": "Apa fokus utama dari D'SNAP?",
+            "answer": "D'SNAP adalah Event Organizer yang berfokus pada penyediaan layanan aktivasi acara dan strategi branding untuk klien. Perusahaan ini berdedikasi untuk memberikan hasil berkualitas tinggi dengan menyeimbangkan kreativitas, inovasi, dan kepuasan klien."
+        },
+        {
+            "question": "Dimana lokasi kantor D'SNAP?",
+            "answer": "Kantor D'SNAP berlokasi di @ Radio Dalam, Jakarta. Perusahaan ini telah beroperasi sejak Mei 2010 dengan tim yang terdiri dari 20 karyawan dari berbagai divisi seperti Akun, Produksi, Konsep, dan Kreatif."
+        },
+        {
+            "question": "Apa saja nilai-nilai inti dari D'SNAP?",
+            "answer": "Nilai-nilai inti D'SNAP mencakup kreativitas, inovasi, kepuasan klien, serta dedikasi untuk menghasilkan karya berkualitas tinggi yang melampaui harapan klien."
+        },
+        {
+            "question": "Layanan apa yang ditawarkan oleh D'SNAP?",
+            "answer": "D'SNAP menawarkan berbagai layanan aktivasi acara seperti peluncuran produk, konser musik, acara olahraga, perayaan komunitas, dan acara kuliner. Mereka juga menyediakan layanan pendukung seperti desain grafis, teknologi audiovisual, dan dokumentasi acara."
+        },
+        {
+            "question": "Apa saja acara yang bisa dikelola oleh D'SNAP?",
+            "answer": "D'SNAP berpengalaman dalam mengelola berbagai jenis acara seperti peluncuran produk, konser, perayaan komunitas, acara olahraga, dan acara kuliner, dengan memastikan setiap detail acara terencana dengan baik."
+        },
+        {
+            "question": "Apakah D'SNAP memiliki pengalaman dengan acara di luar Jakarta?",
+            "answer": "Ya, D'SNAP memiliki pengalaman mengelola acara di berbagai kota di Indonesia, termasuk Jakarta, Bandung, Surabaya, Medan, dan kota-kota lainnya, dengan adaptasi terhadap budaya dan kebutuhan lokal."
+        },
+        {
+            "question": "Bagaimana cara menghubungi D'SNAP untuk konsultasi acara?",
+            "answer": "Anda dapat menghubungi D'SNAP melalui kontak yang tersedia di website atau halaman reservasi untuk konsultasi lebih lanjut mengenai perencanaan acara."
+        },
+        {
+            "question": "Apa yang membuat D'SNAP unggul dibandingkan Event Organizer lainnya?",
+            "answer": "D'SNAP unggul dengan pendekatan berbasis tim yang solid, pemahaman mendalam terhadap kebutuhan klien, serta perencanaan strategis yang fleksibel untuk memastikan hasil yang optimal."
+        },
+        {
+            "question": "Apakah D'SNAP menawarkan layanan untuk acara hibrid?",
+            "answer": "Ya, D'SNAP memiliki pengalaman dalam menyelenggarakan acara virtual dan hibrid, menyediakan teknologi seperti live streaming, platform interaktif, dan integrasi media sosial untuk mendukung acara tersebut."
         },
         {
             "question": "Perusahaan apa ini?",
@@ -148,6 +179,7 @@ class ChatbotHandler {
           "answer": "Keunggulan kami terletak pada kreativitas, dedikasi, dan pengalaman dalam mengelola berbagai jenis acara. Kami selalu mengutamakan kepuasan klien dengan memberikan solusi acara yang inovatif dan hasil yang melampaui harapan."
         }
       ], 
+      
       english: [
         {
             "question": "What is D'SNAP! company ?",
