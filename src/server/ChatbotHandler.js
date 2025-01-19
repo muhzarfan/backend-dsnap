@@ -40,51 +40,51 @@ class ChatbotHandler {
         // estimasi biaya
         {
             "question": "Perayaan Komunitas",
-            "answer": "Untuk menyelenggarakan perayaan komunitas, Anda dapat memilih opsi acara medium di halaman Reservasi, dengan harga mulai dari IDR 25,000,000.00."
+            "answer": "Untuk menyelenggarakan perayaan komunitas, Anda dapat memilih opsi acara medium di halaman Reservasi, dengan harga mulai dari IDR 25,000,000.00. Untuk informasi lebih lengkap silahkan hubungi kontak kami."
         },
         {
           "question": "Berapa biaya untuk mengadakan perayaan komunitas ?",
-          "answer": "Untuk menyelenggarakan perayaan komunitas, Anda dapat memilih opsi acara medium di halaman Reservasi, dengan harga mulai dari IDR 25,000,000.00."
+          "answer": "Untuk menyelenggarakan perayaan komunitas, Anda dapat memilih opsi acara medium di halaman Reservasi, dengan harga mulai dari IDR 25,000,000.00. Untuk informasi lebih lengkap silahkan hubungi kontak kami."
         },
         {
           "question": "Peluncuran Produk",
-          "answer": "Untuk menyelenggarakan peluncuran produk, Anda dapat memilih opsi acara besar di halaman Reservasi, dengan harga mulai dari IDR 50,000,000.00."
+          "answer": "Untuk menyelenggarakan peluncuran produk, Anda dapat memilih opsi acara besar di halaman Reservasi, dengan harga mulai dari IDR 50,000,000.00. Untuk informasi lebih lengkap silahkan hubungi kontak kami."
         },
         {
           "question": "Berapa biaya untuk mengadakan peluncuran produk ?",
-          "answer": "Untuk menyelenggarakan peluncuran produk, Anda dapat memilih opsi acara besar di halaman Reservasi, dengan harga mulai dari IDR 50,000,000.00."
+          "answer": "Untuk menyelenggarakan peluncuran produk, Anda dapat memilih opsi acara besar di halaman Reservasi, dengan harga mulai dari IDR 50,000,000.00. Untuk informasi lebih lengkap silahkan hubungi kontak kami."
         },
         {
           "question": "Konferensi",
-          "answer": "Untuk menyelenggarakan konferensi, Anda dapat memilih opsi acara kecil di halaman Reservasi, dengan harga mulai dari IDR 10,000,000.00."
+          "answer": "Untuk menyelenggarakan konferensi, Anda dapat memilih opsi acara kecil di halaman Reservasi, dengan harga mulai dari IDR 10,000,000.00. Untuk informasi lebih lengkap silahkan hubungi kontak kami."
         },
         {
           "question": "Berapa biaya untuk mengadakan konferensi ?",
-          "answer": "Untuk menyelenggarakan konferensi konferensi, Anda dapat memilih opsi acara kecil di halaman Reservasi, dengan harga mulai dari IDR 10,000,000.00."
+          "answer": "Untuk menyelenggarakan konferensi konferensi, Anda dapat memilih opsi acara kecil di halaman Reservasi, dengan harga mulai dari IDR 10,000,000.00. Untuk informasi lebih lengkap silahkan hubungi kontak kami."
         },
         {
           "question": "Acara Konser Musik",
-          "answer": "Untuk menyelenggarakan acara konser musik, Anda dapat memilih opsi acara besar di halaman Reservasi, dengan harga mulai dari IDR 50,000,000.00."
+          "answer": "Untuk menyelenggarakan acara konser musik, Anda dapat memilih opsi acara besar di halaman Reservasi, dengan harga mulai dari IDR 50,000,000.00. Untuk informasi lebih lengkap silahkan hubungi kontak kami."
         },
         {
           "question": "Berapa biaya untuk mengadakan Acara Konser Musik",
-          "answer": "Untuk menyelenggarakan acara konser musik, Anda dapat memilih opsi acara besar di halaman Reservasi, dengan harga mulai dari IDR 50,000,000.00."
+          "answer": "Untuk menyelenggarakan acara konser musik, Anda dapat memilih opsi acara besar di halaman Reservasi, dengan harga mulai dari IDR 50,000,000.00. Untuk informasi lebih lengkap silahkan hubungi kontak kami."
         },
         {
           "question": "Acara Olahraga",
-          "answer": "Untuk menyelenggarakan acara olahraga, Anda dapat memilih opsi acara medium di halaman Reservasi, dengan harga mulai dari IDR 25,000,000.00."
+          "answer": "Untuk menyelenggarakan acara olahraga, Anda dapat memilih opsi acara medium di halaman Reservasi, dengan harga mulai dari IDR 25,000,000.00. Untuk informasi lebih lengkap silahkan hubungi kontak kami."
         },
         {
           "question": "Berapa biaya untuk mengadakan Acara Olahraga ?",
-          "answer": "Untuk menyelenggarakan acara olahraga, Anda dapat memilih opsi acara medium di halaman Reservasi, dengan harga mulai dari IDR 25,000,000.00."
+          "answer": "Untuk menyelenggarakan acara olahraga, Anda dapat memilih opsi acara medium di halaman Reservasi, dengan harga mulai dari IDR 25,000,000.00. Untuk informasi lebih lengkap silahkan hubungi kontak kami."
         },
         {
           "question": "Acara Kuliner",
-          "answer": "Untuk menyelenggarakan acara kuliner, Anda dapat memilih opsi acara medium di halaman Reservasi, dengan harga mulai dari IDR 25,000,000.00."
+          "answer": "Untuk menyelenggarakan acara kuliner, Anda dapat memilih opsi acara medium di halaman Reservasi, dengan harga mulai dari IDR 25,000,000.00. Untuk informasi lebih lengkap silahkan hubungi kontak kami."
         },
         {
           "question": "Berapa biaya untuk mengadakan Acara Kuliner",
-          "answer": "Untuk menyelenggarakan acara kuliner, Anda dapat memilih opsi acara medium di halaman Reservasi, dengan harga mulai dari IDR 25,000,000.00."
+          "answer": "Untuk menyelenggarakan acara kuliner, Anda dapat memilih opsi acara medium di halaman Reservasi, dengan harga mulai dari IDR 25,000,000.00. Untuk informasi lebih lengkap silahkan hubungi kontak kami."
         },
         {
           "question": "Bagaimana cara booking event ?",
