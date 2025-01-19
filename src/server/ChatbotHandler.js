@@ -93,6 +93,46 @@ class ChatbotHandler {
         {
           "question": "Bagaimana cara memesan jasa ?",
           "answer": "Anda bisa ke halaman reservasi untuk informasi lebih lengkap atau juga bisa menghubungi kontak yang tertera."
+        },
+        {
+          "question": "Apakah D'SNAP menyediakan layanan konsultasi sebelum acara?",
+          "answer": "Ya, D'SNAP menyediakan layanan konsultasi, silahkan hubungi kontak yang tertera. Tim kami akan membantu merancang konsep acara yang sesuai dengan visi Anda."
+        },
+        {
+          "question": "Apakah D'SNAP menyediakan layanan dokumentasi acara?",
+          "answer": "Tentu saja, kami menyediakan layanan dokumentasi acara seperti fotografi dan videografi profesional untuk memastikan momen penting Anda terdokumentasi dengan baik."
+        },
+        {
+          "question": "Apakah D'SNAP menawarkan layanan desain grafis untuk acara?",
+          "answer": "Ya, kami menawarkan layanan desain grafis untuk mendukung materi promosi dan visual acara, seperti undangan, poster, backdrop, dan materi lainnya."
+        },
+        {
+          "question": "Apakah D'SNAP dapat menangani acara virtual atau hybrid?",
+          "answer": "Ya, D'SNAP memiliki pengalaman dalam mengelola acara virtual dan hybrid. Kami menyediakan solusi teknologi yang sesuai, termasuk live streaming, platform interaktif, dan integrasi media sosial."
+        },
+        {
+          "question": "Apakah D'SNAP memiliki jaringan vendor pendukung acara?",
+          "answer": "Ya, kami memiliki jaringan vendor terpercaya untuk berbagai kebutuhan acara, seperti katering, dekorasi, perlengkapan audiovisual, dan lain-lain."
+        },
+        {
+          "question": "Berapa lama waktu yang dibutuhkan untuk persiapan acara?",
+          "answer": "Waktu persiapan bergantung pada skala dan kompleksitas acara. Untuk acara kecil hingga menengah, biasanya memerlukan waktu 2-4 minggu. Sedangkan acara besar dapat memerlukan waktu 1-3 bulan."
+        },
+        {
+          "question": "Apakah D'SNAP menawarkan paket acara yang sudah jadi?",
+          "answer": "Ya, kami menyediakan paket acara yang sudah dirancang sebelumnya untuk memudahkan Anda, seperti paket peluncuran produk, pesta komunitas, dan konser musik. Detailnya dapat Anda temukan di halaman reservasi."
+        },
+        {
+          "question": "Apakah saya bisa custom paket acara di D'SNAP?",
+          "answer": "Tentu saja! Anda dapat berkonsultasi dengan tim kami untuk merancang paket acara yang sesuai dengan kebutuhan dan anggaran Anda."
+        },
+        {
+          "question": "Bagaimana D'SNAP menangani tantangan atau perubahan mendadak selama acara?",
+          "answer": "Kami memiliki tim yang berpengalaman dan responsif untuk menangani setiap tantangan atau perubahan mendadak dengan solusi cepat dan efektif demi keberhasilan acara Anda."
+        },
+        {
+          "question": "Apa yang membedakan D'SNAP dari event organizer lainnya?",
+          "answer": "Keunggulan kami terletak pada kreativitas, dedikasi, dan pengalaman dalam mengelola berbagai jenis acara. Kami selalu mengutamakan kepuasan klien dengan memberikan solusi acara yang inovatif dan hasil yang melampaui harapan."
         }
       ],
       english: [
