@@ -1,34 +1,21 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const routes = require('./routes'); 
+const routes = require('./routes');
 const path = require('path');
 const session = require('express-session');
 const cors = require('cors');
-require('dotenv').config();
+require('dotenv').config(); 
 
 const app = express();
-const PORT = process.env.PORT || 4000; 
+const PORT = process.env.PORT || 4000; // Port server
 
 // Middleware untuk mengizinkan CORS
-const allowedOrigins = [
-  'https://snapsindo.vercel.app',
-  'http://localhost:3000', 
-  'http://localhost:4000',
-  'https://backend-dsnap.vercel.app/',
-];
-
 app.use(
   cors({
-    origin: (origin, callback) => {
-      if (!origin || allowedOrigins.includes(origin)) {
-        callback(null, true);
-      } else {
-        callback(new Error('Not allowed by CORS'));
-      }
-    },
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
-    credentials: true,
+    origin: 'https://snapsindo.vercel.app/', 
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], 
+    allowedHeaders: ['Content-Type', 'Authorization'], 
+    credentials: true, 
   })
 );
 
@@ -44,10 +31,10 @@ app.use('/uploads', express.static(path.join(__dirname, '../../uploads')));
 // Middleware untuk session
 app.use(
   session({
-    secret: process.env.SESSION_SECRET || 'your_secret_key', 
+    secret: process.env.SESSION_SECRET || 'your_secret_key', // Kunci session
     resave: false,
     saveUninitialized: true,
-    cookie: { secure: false }, 
+    cookie: { secure: false }, // Set ke `true` jika menggunakan HTTPS
   })
 );
 
