@@ -140,7 +140,7 @@ class ChatbotHandler {
         },
         {
           "question": "Apakah D'SNAP menyediakan layanan konsultasi sebelum acara?",
-          "answer": "Ya, D'SNAP menyediakan layanan konsultasi, silahkan hubungi kontak yang tertera. Tim kami akan membantu merancang konsep acara yang sesuai dengan visi Anda."
+          "answer": "Tentu saja, kami selalu melayani konsultasi seputar event baik sebelum maupun sesudah acara!. Jika ingin konsultasi lebih lanjut terkait event, silahkan hubungi kontak yang tertera!"
         },
         {
           "question": "Apakah D'SNAP menyediakan layanan dokumentasi acara?",
@@ -152,7 +152,7 @@ class ChatbotHandler {
         },
         {
           "question": "Apakah D'SNAP dapat menangani acara virtual atau hybrid?",
-          "answer": "Ya, D'SNAP memiliki pengalaman dalam mengelola acara virtual dan hybrid. Kami menyediakan solusi teknologi yang sesuai, termasuk live streaming, platform interaktif, dan integrasi media sosial."
+          "answer": "Ya, D'SNAP memiliki pengalaman dalam menyelenggarakan acara virtual dan hybrid, menyediakan teknologi seperti live streaming, platform interaktif, dan integrasi media sosial untuk mendukung acara tersebut."
         },
         {
           "question": "Apakah D'SNAP memiliki jaringan vendor pendukung acara?",
@@ -163,12 +163,8 @@ class ChatbotHandler {
           "answer": "Waktu persiapan bergantung pada skala dan kompleksitas acara. Untuk acara kecil hingga menengah, biasanya memerlukan waktu 2-4 minggu. Sedangkan acara besar dapat memerlukan waktu 1-3 bulan."
         },
         {
-          "question": "Apakah D'SNAP menawarkan paket acara yang sudah jadi?",
-          "answer": "Ya, kami menyediakan paket acara yang sudah dirancang sebelumnya untuk memudahkan Anda, seperti paket peluncuran produk, pesta komunitas, dan konser musik. Detailnya dapat Anda temukan di halaman reservasi."
-        },
-        {
           "question": "Apakah saya bisa custom paket acara di D'SNAP?",
-          "answer": "Tentu saja! Anda dapat berkonsultasi dengan tim kami untuk merancang paket acara yang sesuai dengan kebutuhan dan anggaran Anda."
+          "answer": "Tentu saja! Anda dapat berkonsultasi dengan tim kami untuk merancang paket acara yang sesuai dengan kebutuhan dan anggaran Anda. Untuk detail lebih lengkap silahkan hubungi kontak kami!"
         },
         {
           "question": "Bagaimana D'SNAP menangani tantangan atau perubahan mendadak selama acara?",
@@ -177,7 +173,55 @@ class ChatbotHandler {
         {
           "question": "Apa yang membedakan D'SNAP dari event organizer lainnya?",
           "answer": "Keunggulan kami terletak pada kreativitas, dedikasi, dan pengalaman dalam mengelola berbagai jenis acara. Kami selalu mengutamakan kepuasan klien dengan memberikan solusi acara yang inovatif dan hasil yang melampaui harapan."
-        }
+        },
+        {
+          "question": "Berapa dana yg dibutuhkan untuk menyewa jasa",
+          "answer": "Saat ini, kami hanya menyediakan acara untuk Perayaan Komunitas, Peluncuran Produk, Konferensi, Konser Musik, Acara Olahraga, dan Acara Kuliner. Untuk rincian biaya penyelenggaraan bisakah anda beritahu acara apa yang ingin anda ketahui biayanya?"
+        },
+        {
+          "question": "Apa saja proyek besar yang pernah ditangani oleh D'SNAP?",
+          "answer": "D'SNAP menyediakan layanan untuk berbagai jenis acara, termasuk Perayaan Komunitas, Peluncuran Produk, Konferensi, Konser Musik, Acara Olahraga, dan Acara Kuliner. Untuk melihat proyek besar yang sudah kami tangani silahkan buka halaman Projects!"
+        },
+        {
+          "question": "Udah pernah handle acara kayak gini sebelumnya, belum?",
+          "answer": "Untuk saat ini, kami hanya menyediakan acara untuk Perayaan Komunitas, Peluncuran Produk, Konferensi, Konser Musik, Acara Olahraga, dan Acara Kuliner. Untuk rincian biaya penyelenggaraan bisakah anda beritahu acara apa yang ingin anda ketahui biayanya? Jika ingin informasi lebih lengkap silahkan hubungi kontak kami"
+        },
+        {
+          "question": "Bisa lihat contoh acara yang pernah kalian kerjain, nggak?",
+          "answer": "Anda bisa coba untuk ke halaman projects untuk event-event yang sudah pernah kami kerjakan!"
+        },
+        {
+          "question": "Kalian biasanya nyediain apa aja? Dekor, makanan, hiburan, atau semua lengkap?",
+          "answer": "Kami menyediakan Booth, Perencanaan & Manajemen Acara, Dekorasi & Desain Set, Dukungan Teknologi & AV, Talent & Hiburan, Promosi & Pemasaran Acara, Layanan Katering & Makanan, Pendaftaran & Tiket, dan Fotografi & Videografi Acara."
+        },
+        {
+          "question": "Kalau mau pilih vendor sendiri, boleh nggak?",
+          "answer": "Maaf sekali, untuk pilih vendor sendiri tidak bisa"
+        },
+        {
+          "question": "Ada paket harga yang bisa disesuaikan sama budget nggak?",
+          "answer": "Kami menyediakan Paket Small, Medium, dan Big, untuk budgeting silahkan hubungi pada kontak kami ya!"
+        },
+        {
+          "question": "Biayanya udah all-in, atau ada tambahan lagi?",
+          "answer": "Biaya pada setiap paket itu mulai dari Paket Small, Medium, dan Big, jika ingin lebih rinci silahkan hubungi kontak kami!"
+        },
+        {
+          "question": "Sistem pembayarannya gimana? DP dulu atau bayar full belakangan?",
+          "answer": "Untuk sistem pembayaran bisa DP terlebih dahulu ya!"
+        },
+        {
+          "question": "Kalau ada perubahan mendadak, gampang nggak hubungi kalian?",
+          "answer": "Tentu saja, kami sangat cepat tanggap jika ada kendala dalam event!"
+        },
+        {
+          "question": "Tim yang turun di hari H berapa orang?",
+          "answer": "Kami menyediakan Team Leader dan Crew yang akan selalu siap membantu, crew yang akan turun menyesuaikan dengan event yang sudah di pesan ya!"
+        },
+        {
+          "question": "Kalau ada masalah di acara, kalian ada plan cadangan, kan?",
+          "answer": "Tentu saja, kami selalu menyediakan rencana-rencanan cadangan jika terjadi suatu kendala dalam event!"
+        },
       ], 
       
       english: [
