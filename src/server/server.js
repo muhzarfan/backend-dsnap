@@ -13,6 +13,7 @@ const PORT = process.env.PORT || 4000;
 const allowedOrigins = [
   'https://snapsindo.vercel.app',
   'http://localhost:3000', 
+  'http://localhost:4000',
   'https://backend-dsnap.vercel.app/',
 ];
 
