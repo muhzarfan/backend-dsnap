@@ -222,6 +222,54 @@ class ChatbotHandler {
           "question": "Kalau ada masalah di acara, kalian ada plan cadangan, kan?",
           "answer": "Tentu saja, kami selalu menyediakan rencana-rencanan cadangan jika terjadi suatu kendala dalam event!"
         },
+        {
+          "question": "Apa saja review atau testimoni dari klien terdahulu terkait layanan yang telah diberikan?",
+          "answer": "Untuk hasil event yang sudah di kerjakan bisa dilihat di laman projects, namun untuk testimoni bisa hubungi kontak kami lebih lanjut"
+        },
+        {
+          "question": "Apakah Anda terbuka untuk menerima ide kreatif kami selama perencanaan?",
+          "answer": "Ya, tentu saja kamu selalu terbuka untuk menerima ide kreatif dalam bentuk apapun"
+        },
+        {
+          "question": "Apakah Anda bisa membantu merancang tema atau konsep acara yang unik?",
+          "answer": "Tentu saja, semua konsep dan tema akan di handle oleh creative dan produksi dari perusahaan kami!"
+        },
+        {
+          "question": "Apakah ada paket atau layanan yang bisa kami pilih sesuai kebutuhan?",
+          "answer": "Kami menyediakan Paket Small, Medium, dan Big, untuk budgeting silahkan hubungi pada kontak kami ya!"
+        },
+        {
+          "question": "Apakah Anda bekerja sama dengan vendor lain seperti catering, dekorasi, atau fotografer?",
+          "answer": "Ya, kami memiliki jaringan vendor terpercaya untuk berbagai kebutuhan acara, seperti katering, dekorasi, perlengkapan audiovisual, dan lain-lain."
+        },
+        {
+          "question": "Bagaimana cara Anda menangani masalah tak terduga selama acara?",
+          "answer": "Kami memiliki tim yang berpengalaman dan responsif untuk menangani setiap tantangan atau perubahan mendadak dengan solusi cepat dan efektif demi keberhasilan acara Anda."
+        },
+        {
+          "question": "Seberapa fleksibel tim Anda dalam menyesuaikan dekorasi dengan keinginan kami?",
+          "answer": "Tim kami sangat fleksibel, jika ada desain yang kurang sesuai maka akan kami buat hingga sesuai keinginan anda."
+        },
+        {
+          "question": "Apa benefit-nya jika kita memesan layanan EO?",
+          "answer": "Booth, Event Planning & Management, Set Decoration & Design, Technology & AV Support, Talent & Entertainment, Event Promotion & Marketing, Catering & Food Services, Registration & Tickets, and Event Photography & Videography."
+        },
+        {
+          "question": "Bagaimana EO menangani masalah saat acara berlangsung?",
+          "answer": "Kami mempunyai team leader yang kompeten dan berpengelaman sehingga dapat menangani masalah yang terjadi!"
+        },
+        {
+          "question": "Apakah EO menjamin keamanan saat acara berlangsung?",
+          "answer": "Tentu saja, karena keamanan salah satu prioritas utama kami sebagai event organizier"
+        },
+        {
+          "question": "Bisa buat jalanin semua yang diminta, dengan dana berapa?",
+          "answer": "Kami menyediakan Paket Small, Medium, dan Big, untuk budgeting silahkan hubungi pada kontak kami ya!"
+        },
+        {
+          "question": "Halo saya ingin memakai jasa event organizer,kira kira untuk event yang dapat di hadiri kurang lebih 1000 pengunjung dapat fasilitas apa saja Dan biaya pasny berapa?",
+          "answer": "Kami menyediakan Paket Small, Medium, dan Big. Untuk informasi lebih lanjut anda bisa ke halaman Reservation atau silahkan hubungi pada kontak kami ya!"
+        }
       ], 
       
       english: [
