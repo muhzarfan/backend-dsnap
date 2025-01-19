@@ -10,12 +10,24 @@ const app = express();
 const PORT = process.env.PORT || 4000; 
 
 // Middleware untuk mengizinkan CORS
+const allowedOrigins = [
+  'https://snapsindo.vercel.app',
+  'http://localhost:3000', 
+  'https://backend-dsnap.vercel.app/',
+];
+
 app.use(
   cors({
-    origin: 'https://backend-dsnap.vercel.app/', 
-    methods: ['GET', 'POST', 'PUT', 'DELETE'], 
-    allowedHeaders: ['Content-Type', 'Authorization'], 
-    credentials: true, 
+    origin: (origin, callback) => {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error('Not allowed by CORS'));
+      }
+    },
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true,
   })
 );
 
