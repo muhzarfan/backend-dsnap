@@ -19,11 +19,13 @@ app.use(
     credentials: true, 
   })
 );
+
+// Express json
 app.use(express.json());
+// Limit file upload
 app.use(fileUpload({
-    limits: { fileSize: 5 * 1024 * 1024 },
-    abortOnLimit: true
-}));
+  limits: { fileSize: 5 * 1024 * 1024 }, // 5MB limit
+}))
 
 // Middleware untuk parsing body JSON
 app.use(bodyParser.json({ limit: '10mb' })); 
