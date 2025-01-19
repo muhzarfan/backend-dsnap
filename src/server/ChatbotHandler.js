@@ -6,23 +6,44 @@ class ChatbotHandler {
     this.data = {
       indonesia: [
         {
-            "question": "Tentang D'SNAP! ?",
+          "questions": [
+            "Apa yang dimaksud dengan D'SNAP! ?",
+            "Siapa D'SNAP! ?",
+            "Bisa jelaskan apa itu D'SNAP! ?",
+            "Apa fokus utama D'SNAP! ?",
+            "Apa itu D'SNAP! ?",
+            "Bagaimana D'SNAP! bekerja?",
+            "Kapan D'SNAP! mulai beroperasi?",
+            "Dimana lokasi D'SNAP! ?",
+            "Berapa jumlah karyawan D'SNAP! ?",
+            "Perusahaan apa ini?",
+            "Apa itu D'SNAP! ?",
+            "Apa nilai inti D'SNAP! ?"
+        ],
             "answer": "D'SNAP adalah sebuah Event Organizer yang menyediakan berbagai layanan dalam aktivasi acara/brand strategis untuk klien. D'SNAP mulai beroperasi pada bulan Mei 2010 dan kini berlokasi di @ Radio Dalam, Jakarta, dengan 20 karyawan (Divisi Akun, Produksi, Konsep, & Kreatif). Setiap anggota tim berkomitmen untuk memberikan karya berkualitas tinggi yang mencerminkan nilai-nilai inti perusahaan: kreativitas, inovasi, dan kepuasan klien😊"
         },
         {
-            "question": "Perusahaan apa ini?",
-            "answer": "D'SNAP adalah sebuah Event Organizer yang menyediakan berbagai layanan dalam aktivasi acara/brand strategis untuk klien. D'SNAP mulai beroperasi pada bulan Mei 2010 dan kini berlokasi di @ Radio Dalam, Jakarta, dengan 20 karyawan (Divisi Akun, Produksi, Konsep, & Kreatif). Setiap anggota tim berkomitmen untuk memberikan karya berkualitas tinggi yang mencerminkan nilai-nilai inti perusahaan: kreativitas, inovasi, dan kepuasan klien😊"
-        },
-        {
-          "question": "Apa itu D'SNAP! ?",
-          "answer": "D'SNAP adalah sebuah Event Organizer yang menyediakan berbagai layanan dalam aktivasi acara/brand strategis untuk klien. D'SNAP mulai beroperasi pada bulan Mei 2010 dan kini berlokasi di @ Radio Dalam, Jakarta, dengan 20 karyawan (Divisi Akun, Produksi, Konsep, & Kreatif). Setiap anggota tim berkomitmen untuk memberikan karya berkualitas tinggi yang mencerminkan nilai-nilai inti perusahaan: kreativitas, inovasi, dan kepuasan klien😊"
-        },
-        {
-            "question": "Kelebihan D'SNAP! ?",
+          "questions": [
+            "Apa yang membuat D'SNAP! unggul?",
+            "Kenapa memilih D'SNAP! ?",
+            "Apa keunggulan utama D'SNAP! ?",
+            "Kenapa D'SNAP! lebih baik dari yang lain?",
+            "Apa yang membedakan D'SNAP! dengan kompetitor?",
+            "Apa nilai lebih yang dimiliki D'SNAP! ?",
+            "Mengapa D'SNAP! menjadi pilihan terbaik?"
+        ],
             "answer": "Kami percaya bahwa kesuksesan berasal dari kerja tim yang kuat, di mana setiap divisi dalam tim kami berkomitmen untuk pertumbuhan dan kolaborasi, baik secara internal maupun dengan klien kami sebagai mitra. Dengan memahami secara mendalam kebutuhan klien, produk, target pasar, dan tujuan mereka, kami memberikan strategi praktis yang terarah untuk melampaui harapan. Dengan profesionalisme, energi, dan efisiensi, kami merancang solusi komunikasi yang berdampak yang menyeimbangkan efektivitas biaya dan hasil. Dipandu oleh perencanaan yang teliti dan kelincahan, kami tetap fleksibel dan adaptif untuk mengatasi tantangan dan meraih peluang, memastikan hasil terbaik untuk klien kami."
         },
         {
-          "question": "Layanan Event apa saja yang diselenggarakan oleh D'SNAP! ?",
+          "questions": [
+            "Apa layanan yang ditawarkan D'SNAP! ?",
+            "Event apa saja yang bisa diadakan oleh D'SNAP! ?",
+            "Jenis acara apa yang bisa dikelola oleh D'SNAP! ?",
+            "Acara apa yang pernah dilakukan oleh D'SNAP! ?",
+            "D'SNAP! menangani acara jenis apa saja?",
+            "Layanan apa saja yang tersedia di D'SNAP! ?",
+            "D'SNAP! cocok untuk acara jenis apa?"
+        ],
           "answer": "Kami berpengalaman dalam mengadakan acara besar seperti peluncuran produk, perayaan komunitas, konser, acara olahraga, dan kuliner😊."
         },
         {
