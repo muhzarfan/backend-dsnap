@@ -274,149 +274,137 @@ class ChatbotHandler {
       
       english: [
         {
-            "question": "What is D'SNAP! company ?",
-            "answer": "D'SNAP is an Event Organizer that provides a multitude of services in strategic event/brand activation for the clients. D'SNAP started its operation in May 2010 and now occupies @ Radio Dalam, Jakarta. with 20 employees (Account, Production, Concept, & Creative Division). Each member is dedicated to delivering high-quality work that embodies the company's core values: creativity, innovation, and client satisfaction😊"
+          "question": "About D'SNAP! ?",
+          "answer": "D'SNAP is an Event Organizer that provides various services in strategic event/brand activation for clients. D'SNAP started operating in May 2010 and is now located at @ Radio Dalam, Jakarta, with 20 employees (Account, Production, Concept, & Creative Division). Each team member is committed to providing high-quality work that reflects the company's core values: creativity, innovation, and client satisfaction😊"
         },
         {
-          "question": "About the D'SNAP! company ?",
-          "answer": "D'SNAP is an Event Organizer that provides a multitude of services in strategic event/brand activation for the clients. D'SNAP started its operation in May 2010 and now occupies @ Radio Dalam, Jakarta. with 20 employees (Account, Production, Concept, & Creative Division). Each member is dedicated to delivering high-quality work that embodies the company's core values: creativity, innovation, and client satisfaction😊"
+          "question": "What is D'SNAP! ?",
+          "answer": "D'SNAP is an Event Organizer that provides various services in strategic event/brand activation for clients. D'SNAP started operating in May 2010 and is now located at @ Radio Dalam, Jakarta, with 20 employees (Account, Production, Concept, & Creative Division). Each team member is committed to providing high-quality work that reflects the company's core values: creativity, innovation, and client satisfaction😊"
         },
         {
-          "question": "What is the process for organizing an event with D'SNAP?",
-          "answer": "To organize an event with D'SNAP, simply contact us for an initial consultation. We will discuss your needs, budget, and preferences, and then create a customized plan for your event. After approval, we manage all aspects of the event planning and execution."
+          "question": "What is the main focus of D'SNAP?",
+          "answer": "D'SNAP is an Event Organizer that focuses on providing event activation services and branding strategies for clients. The company is dedicated to delivering high-quality results by balancing creativity, innovation, and client satisfaction."
         },
         {
-          "question": "How can D'SNAP help with event marketing?",
-          "answer": "D'SNAP offers comprehensive event marketing services, including social media promotion, email marketing, influencer partnerships, and media relations. We work with you to develop a marketing strategy that increases visibility and attendance for your event."
+        "question": "Where is the location of D'SNAP's office?",
+        "answer": "D'SNAP's office is located at @ Radio Dalam, Jakarta. The company has been operating since May 2010 with a team of 20 employees from various divisions such as Account, Production, Concept, and Creative."
         },
         {
-          "question": "Does D'SNAP handle the logistics of event transportation?",
-          "answer": "Yes, D'SNAP manages all transportation logistics, including arranging for guest travel, shuttle services, and managing transportation schedules to ensure that attendees arrive on time and comfortably."
+        "question": "What are the core values ​​of D'SNAP?",
+        "answer": "D'SNAP's core values ​​include creativity, innovation, client satisfaction, and dedication to producing high-quality work that exceeds client expectations."
         },
         {
-          "question": "Can D'SNAP provide live entertainment for events?",
-          "answer": "Yes, D'SNAP has a network of entertainers, including musicians, DJs, performers, and speakers. We can arrange live entertainment that fits your event's theme and atmosphere, ensuring a memorable experience for your guests."
+        "question": "What services does D'SNAP offer?",
+        "answer": "D'SNAP offers a variety of event activation services such as product launches, music concerts, sporting events, community celebrations, and culinary events. They also provide supporting services such as graphic design, audiovisual technology, and event documentation."
         },
         {
-          "question": "Does D'SNAP assist with event budgeting?",
-          "answer": "Yes, D'SNAP works closely with clients to create a realistic and transparent budget for each event. We help prioritize expenses, recommend cost-saving solutions, and ensure that your event stays within the budget without compromising quality."
+        "question": "What events can D'SNAP manage?",
+        "answer": "D'SNAP is experienced in managing various types of events such as product launches, concerts, community celebrations, sporting events, and culinary events, ensuring that every detail of the event is well planned."
         },
         {
-          "question": "Can D'SNAP offer virtual event services?",
-          "answer": "Yes, D'SNAP provides full virtual event planning services, including platform selection, live streaming, audience interaction features, and technical support to ensure a smooth and engaging online experience for your attendees."
+        "question": "Does D'SNAP have experience with events outside Jakarta?",
+        "answer": "Yes, D'SNAP has experience managing events in various cities in Indonesia, including Jakarta, Bandung, Surabaya, Medan, and other cities, with adaptation to local culture and needs."
         },
         {
-          "question": "Does D'SNAP offer team-building activities for corporate events?",
-          "answer": "Yes, D'SNAP can incorporate team-building activities into your corporate events, providing a range of interactive experiences designed to improve communication, collaboration, and employee engagement."
+        "question": "How do I contact D'SNAP for event consultation?",
+        "answer": "You can contact D'SNAP through the contacts available on the website or the reservation page for further consultation regarding event planning."
         },
         {
-          "question": "How does D'SNAP handle event coordination on the day of the event?",
-          "answer": "On the day of the event, D'SNAP's team ensures smooth coordination by overseeing all event logistics, including guest arrivals, speaker management, technical setup, and troubleshooting, ensuring everything runs as planned."
+        "question": "What makes D'SNAP superior to other Event Organizers?",
+        "answer": "D'SNAP excels with a solid team-based approach, deep understanding of client needs, and flexible strategic planning to ensure optimal results."
         },
         {
-          "question": "Does D'SNAP offer event photography and videography services?",
-          "answer": "Yes, D'SNAP provides professional event photography and videography services to capture key moments of your event. Our team ensures high-quality visuals that can be used for marketing, social media, or personal keepsakes."
+        "question": "Does D'SNAP offer services for hybrid events?",
+        "answer": "Yes, D'SNAP has experience in organizing virtual and hybrid events, providing technology such as live streaming, interactive platforms, and social media integration to support the event."
         },
         {
-          "question": "Can D'SNAP provide custom event themes and decorations?",
-          "answer": "Yes, D'SNAP offers custom event theme design and decorations. Whether it’s a corporate event, wedding, or festival, we can create unique, branded environments that reflect the spirit and objectives of your event."
+        "question": "What company is this?",
+        "answer": "D'SNAP is an Event Organizer that provides various services in strategic event/brand activation for clients. D'SNAP started operating in May 2010 and is now located at @ Radio Dalam, Jakarta, with 20 employees (Account, Production, Concept, & Creative Divisions). Each team member is committed to delivering high-quality work that reflects the company's core values: creativity, innovation, and client satisfaction😊"
+        },
+                {
+        "question": "What is D'SNAP! ?",
+        "answer": "D'SNAP is an Event Organizer that provides various services in strategic event/brand activation for clients. D'SNAP started operating in May 2010 and is now located at @ Radio Dalam, Jakarta, with 20 employees (Account, Production, Concept, & Creative Divisions). Each team member is committed to providing high-quality work that reflects the company's core values: creativity, innovation, and client satisfaction😊"
         },
         {
-          "question": "Does D'SNAP provide event safety and security services?",
-          "answer": "Yes, D'SNAP can arrange for event safety and security services, including crowd management, emergency response planning, and on-site security personnel to ensure the safety of all attendees."
+        "question": "Advantages of D'SNAP! ?",
+        "answer": "We believe that success comes from strong teamwork, where every division in our team is committed to growth and collaboration, both internally and with our clients as partners. By deeply understanding our clients' needs, products, target markets, and goals, we provide practical, targeted strategies to exceed expectations. With professionalism, energy, and efficiency, we design impactful communication solutions that balance cost-effectiveness and results. Guided by careful planning and agility, we remain flexible and adaptive to overcome challenges and seize opportunities, ensuring the best results for our clients."
         },
         {
-          "question": "How can D'SNAP assist with event follow-up and feedback collection?",
-          "answer": "After your event, D'SNAP assists with gathering attendee feedback through surveys and follow-up communications. This helps assess the success of the event and gather insights for future improvements."
+        "question": "What Event Services does D'SNAP! provide?",
+        "answer": "We are experienced in organizing large events such as product launches, community celebrations, concerts, sports events, and culinary events😊."
         },
         {
-          "question": "Can D'SNAP provide event catering services?",
-          "answer": "Yes, D'SNAP offers event catering services, with a wide range of menu options to suit different dietary needs and preferences. Our catering services ensure that food and beverages enhance the overall experience of your event."
+        "question": "What are the benefits?",
+        "answer": "Booth, Event Planning & Management, Decoration & Set Design, Technology & AV Support, Talent & Entertainment, Event Promotion & Marketing, Catering & Food Services, Registration & Ticketing, and Event Photography & Videography."
         },
         {
-          "question": "How does D'SNAP handle unforeseen challenges during events?",
-          "answer": "D'SNAP is prepared to handle unforeseen challenges with flexibility and professionalism. Our team quickly addresses any issues that arise, ensuring that the event continues smoothly without any disruption."
+        "question": "How much does it cost to hold an event?",
+        "answer": "Currently, we only provide events for Community Celebrations, Product Launches, Conferences, Music Concerts, Sports Events, and Culinary Events. For details of the cost of organizing can you tell us what event you want to know the cost of?"
         },
         {
-          "question": "Does D'SNAP offer post-event content creation services?",
-          "answer": "Yes, D'SNAP offers post-event content creation, including highlight videos, social media posts, and photo albums to share the success of your event with your audience and keep the engagement going after the event."
+        "question": "Are services available throughout Indonesia?",
+        "answer": "Of course, we have successfully organized and managed events in various cities in Indonesia, demonstrating our ability to adapt to various local cultures and business environments. Our experience covers major metropolitan areas such as Jakarta, Bandung, Surabaya, Malang, Lampung, and Medan, as well as many other cities. Every event is executed with the same level of dedication and attention to detail, ensuring that our clients' goals are achieved, no matter the location of the event. Our extensive reach throughout Indonesia allows us to bring our services to a variety of clients, creating memorable and impactful experiences, tailored to the unique characteristics and audiences in each region."
         },
         {
-            "question": "What are D'SNAP!'s strengths?",
-            "answer": "We believe that success comes from strong teamwork, where every division in our team is committed to growth and collaboration, both internally and with our clients as partners. By deeply understanding our clients’ needs, products, target market, and goals, we deliver practical, target-driven strategies to exceed expectations. With professionalism, energy, and efficiency, we craft impactful communication solutions that balance cost-effectiveness and results. Guided by meticulous planning and agility, we remain flexible and adaptive to overcome challenges and seize opportunities, ensuring the best outcomes for our clients."
+        "question": "D'SNAP's Advantages! ?",
+        "answer": "We believe that success comes from strong teamwork, where every division within our team is committed to growth and collaboration, both internally and with our clients as partners. By deeply understanding our clients’ needs, products, target markets, and goals, we deliver practical, target-focused strategies to exceed expectations. With professionalism, energy, and efficiency, we create impactful communication solutions that balance cost-effectiveness and results. Guided by careful planning and agility, we remain flexible and adaptive to overcome challenges and seize opportunities, ensuring the best possible outcomes for our clients."
+        },
+        // cost estimate
+        {
+        "question": "Community Celebration",
+        "answer": "To host a community celebration, you can choose the medium event option on the Reservation page, with prices starting from IDR 25,000,000.00. For more information, please contact us."
         },
         {
-            "question": "D'SNAP!'s advantages?",
-            "answer": "We believe that success comes from strong teamwork, where every division in our team is committed to growth and collaboration, both internally and with our clients as partners. By deeply understanding our clients’ needs, products, target market, and goals, we deliver practical, target-driven strategies to exceed expectations. With professionalism, energy, and efficiency, we craft impactful communication solutions that balance cost-effectiveness and results. Guided by meticulous planning and agility, we remain flexible and adaptive to overcome challenges and seize opportunities, ensuring the best outcomes for our clients."
+        "question": "How much does it cost to host a community celebration?",
+        "answer": "To host a community celebration, you can choose the medium event option on the Reservation page, with prices starting from IDR 25,000,000.00. For more information please contact us."
         },
         {
-            "question": "Benefit of D'SNAP! company ?",
-            "answer": "Booth, Event Planning & Management, Set Decoration & Design, Technology & AV Support, Talent & Entertainment, Event Promotion & Marketing, Catering & Food Services, Registration & Tickets, and Event Photography & Videography."
+        "question": "Product Launch",
+        "answer": "To organize a product launch, you can choose the large event option on the Reservation page, with prices starting from IDR 50,000,000.00. For more information please contact us."
         },
         {
-            "question": "What kind events does D'SNAP! handle?",
-            "answer": "We have experience in organizing large events such as product launches, community celebrations, concerts, sports events, and culinary events😊"
+          "question": "How much does it cost to hold a product launch?",
+        "answer": "To hold a product launch, you can choose the large event option on the Reservation page, with prices starting from IDR 50,000,000.00. For more information, please contact us."
         },
         {
-            "question": "How much does it cost to organize an event?",
-            "answer": "Currently, we only provide events for Community Celebrations, Product Launches, Conferences, Music Concerts, Sports Events, and Culinary Events. For detailed cost information, could you let us know which event you would like to inquire about?"
+        "question": "Conference",
+        "answer": "To hold a conference, you can choose the small event option on the Reservation page, with prices starting from IDR 10,000,000.00. For more information, please contact us."
         },
         {
-            "question": "Can D'SNAP! services be provided across all regions in Indonesia?",
-            "answer": "Of course, we have successfully organized and managed events in numerous cities across Indonesia, showcasing our ability to adapt to various local cultures and business environments. Our experience spans major metropolitan areas like Jakarta, Bandung, Surabaya, Malang, Lampung, and Medan, among many others. Each event is executed with the same level of dedication and attention to detail, ensuring that our clients' objectives are met, no matter the location. This extensive reach across the country allows us to bring our services to a wide range of clients, creating memorable and impactful experiences tailored to each region's unique characteristics and audience."
+        "question": "How much does it cost to hold a conference?",
+        "answer": "To hold a conference, you can choose the small event option on the Reservation page, with prices starting from IDR 10,000,000.00. For more information, please contact us."
         },
         {
-            "question": "What are D'SNAP!'s advantage?",
-            "answer": "We believe that success comes from strong teamwork, where every division in our team is committed to growth and collaboration, both internally and with our clients as partners. By deeply understanding our clients’ needs, products, target market, and goals, we deliver practical, target-driven strategies to exceed expectations. With professionalism, energy, and efficiency, we craft impactful communication solutions that balance cost-effectiveness and results. Guided by meticulous planning and agility, we remain flexible and adaptive to overcome challenges and seize opportunities, ensuring the best outcomes for our clients."
-        },
-        // cost
-        {
-          "question": "Community Celebration",
-          "answer": "To organize a community celebration, you can choose the medium event option on the Reservation page, with prices starting from IDR 25,000,000.00."
+        "question": "Music Concert Event",
+        "answer": "To organize a music concert event, you can choose the large event option on the Reservation page, with prices starting from IDR 50,000,000.00. For more information, please contact us."
         },
         {
-          "question": "How much does it cost to organize a community celebration?",
-          "answer": "To organize a community celebration, you can choose the medium event option on the Reservation page, with prices starting from IDR 25,000,000.00."
+        "question": "How much does it cost to organize a Music Concert Event",
+        "answer": "To organize a music concert event, you can choose the large event option on the Reservation page, with prices starting from IDR 50,000,000.00. For more information, please contact us."
         },
         {
-          "question": "Product Launch",
-          "answer": "To organize a product launch, you can choose the large event option on the Reservation page, with prices starting from IDR 50,000,000.00."
+        "question": "Sports Event",
+        "answer": "To organize a sports event, you can choose the medium event option on the Reservation page, with prices starting from IDR 25,000,000.00. For more information, please contact us."
         },
         {
-          "question": "How much does it cost to organize a product launch?",
-          "answer": "To organize a product launch, you can choose the large event option on the Reservation page, with prices starting from IDR 50,000,000.00."
+        "question": "How much does it cost to hold a Sports Event?",
+        "answer": "To hold a sports event, you can choose the medium event option on the Reservation page, with prices starting from IDR 25,000,000.00. For more information, please contact us."
         },
         {
-          "question": "Corporate Conference",
-          "answer": "To organize a corporate conference, you can choose the small event option on the Reservation page, with prices starting from IDR 10,000,000.00."
+        "question": "Culinary Event",
+        "answer": "To hold a culinary event, you can choose the medium event option on the Reservation page, with prices starting from IDR 25,000,000.00. For more information, please contact us."
         },
         {
-          "question": "How much does it cost to organize a corporate conference?",
-          "answer": "To organize a corporate conference, you can choose the small event option on the Reservation page, with prices starting from IDR 10,000,000.00."
+        "question": "How much does it cost to hold a Culinary Event",
+        "answer": "To hold a culinary event, you can choose the medium event option on the Reservation page, with prices starting from IDR 25,000,000.00. For more information, please contact us."
         },
         {
-          "question": "Musical",
-          "answer": "To organize a musical event, you can choose the large event option on the Reservation page, with prices starting from IDR 50,000,000.00."
+        "question": "How do I book an event?",
+        "answer": "You can go to the reservation page for more complete information or you can also contact the listed contact."
         },
         {
-          "question": "How much does it cost to organize a musical ?",
-          "answer": "To organize a musical event, you can choose the large event option on the Reservation page, with prices starting from IDR 50,000,000.00."
-        },
-        {
-          "question": "Sports",
-          "answer": "To organize a sports event, you can choose the medium event option on the Reservation page, with prices starting from IDR 25,000,000.00."
-        },
-        {
-          "question": "How much does it cost to organize a sports ?",
-          "answer": "To organize a sports event, you can choose the medium event option on the Reservation page, with prices starting from IDR 25,000,000.00."
-        },
-        {
-          "question": "Culinary ",
-          "answer": "To organize a culinary event, you can choose the medium event option on the Reservation page, with prices starting from IDR 25,000,000.00."
-        },
-        {
-          "question": "How much does it cost to organize a culinary ?",
-          "answer": "To organize a culinary event, you can choose the medium event option on the Reservation page, with prices starting from IDR 25,000,000.00."
+        "question": "How do I order services?",
+        "answer": "You can go to the reservation page for more complete information or you can also contact the listed contact."
         },
         {
           "question": "Does D'SNAP provide pre-event consultation services?",
