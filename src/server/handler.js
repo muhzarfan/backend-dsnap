@@ -7,12 +7,12 @@ const jwt = require('jsonwebtoken');
 console.log('Handler module loaded');
 
 // Koneksi supabase
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+const supabaseUrl = process.env.SUPABASE_URL
+const supabaseKey = process.env.SUPABASE_ANON_KEY;
 
 if (!supabaseUrl || !supabaseKey) {
-    console.error("Error: Variabel SUPABASE_URL atau SUPABASE_SERVICE_ROLE_KEY tidak ditemukan di environment.");
-    process.exit(1);
+    console.error("Error: SUPABASE_URL dan SUPABASE_ANON_KEY seharusnya ada di environment variables.");
+    process.exit(1); 
 }
 
 const supabase = createClient(supabaseUrl, supabaseKey);
