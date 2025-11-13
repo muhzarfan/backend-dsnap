@@ -23,16 +23,53 @@ const upload = multer({ storage: storage });
 
 // Portfolio Handlers
 exports.getPortfolios = async (req, res) => {
+    const bucketName = 'gambar-event';
     const { data, error } = await supabase.from('portfolios').select('*');
     if (error) return res.status(500).json({ error: error.message });
-    res.json(data);
+    
+    // Membuat signed URL karena bucket private
+    const portfoliosWithSignedUrls = await Promise.all(data.map(async (portfolio) => {
+        const storedUrl = portfolio.imageUrl;
+        const urlParts = storedUrl.split('/');
+        const fileName = urlParts[urlParts.length - 1];
+
+        const { data: signedUrlData, error: signedUrlError } = await supabase.storage
+            .from(bucketName)
+            .createSignedUrl(fileName, 60); 
+
+        if (signedUrlError) {
+             console.error(`Error membuat Signed URL untuk ${fileName}:`, signedUrlError);
+             return { ...portfolio, imageUrl: null, urlError: 'Gagal membuat URL akses gambar' }; 
+        }
+        
+        return { ...portfolio, imageUrl: signedUrlData.signedUrl };
+    }));
+    
+    res.json(portfoliosWithSignedUrls);
 };
 
 exports.getPortfolioById = async (req, res) => {
     const { id } = req.params;
+    const bucketName = 'gambar-event';
     const { data, error } = await supabase.from('portfolios').select('*').eq('id', id).single();
     if (error) return res.status(404).json({ message: 'Portfolio tidak ditemukan' });
-    res.json(data);
+
+    const storedUrl = data.imageUrl;
+    const urlParts = storedUrl.split('/');
+    const fileName = urlParts[urlParts.length - 1]; 
+    
+    const { data: signedUrlData, error: signedUrlError } = await supabase.storage
+        .from(bucketName)
+        .createSignedUrl(fileName, 60);
+        
+    if (signedUrlError) {
+        console.error(`Error membuat Signed URL untuk ${fileName}:`, signedUrlError);
+        return res.status(500).json({ message: 'Gagal membuat URL akses untuk gambar' });
+    }
+    
+    const finalData = { ...data, imageUrl: signedUrlData.signedUrl };
+
+    res.json(finalData);
 };
 
 exports.createPortfolio = (req, res) => {
@@ -68,7 +105,7 @@ exports.createPortfolio = (req, res) => {
                 .from('portfolios')
                 .insert([{ 
                     eventName,
-                    imageUrl: 'temporary_url'
+                    imageUrl: fileName
                 }])
                 .select();
 
