@@ -17,7 +17,7 @@ if (!supabaseUrl || !supabaseKey) {
 
 const supabase = createClient(supabaseUrl, supabaseKey);
 
-// Penyimpanan file multer
+// Simpan File pada Multer
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
@@ -302,5 +302,6 @@ module.exports = {
     loginHandler: exports.loginHandler,
     logout: exports.logout,
 };
+
 
 
