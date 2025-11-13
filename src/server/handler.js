@@ -8,11 +8,11 @@ console.log('Handler module loaded');
 
 // Koneksi supabase
 const supabaseUrl = process.env.SUPABASE_URL
-const supabaseKey = process.env.SUPABASE_ANON_KEY;
+const supabaseKey = process.env.SUPABASE_SERVICE_KEY;
 
 if (!supabaseUrl || !supabaseKey) {
-    console.error("Error: SUPABASE_URL dan SUPABASE_ANON_KEY seharusnya ada di environment variables.");
-    process.exit(1); 
+    console.error("Error: SUPABASE_URL dan SUPABASE_SERVICE_KEY seharusnya ada di environment variables.");
+    process.exit(1); 
 }
 
 const supabase = createClient(supabaseUrl, supabaseKey);
@@ -265,4 +265,5 @@ module.exports = {
     loginHandler: exports.loginHandler,
     logout: exports.logout,
 };
+
 
