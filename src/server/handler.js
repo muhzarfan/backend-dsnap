@@ -6,12 +6,18 @@ const jwt = require('jsonwebtoken');
 
 console.log('Handler module loaded');
 
-// Konfigurasi Supabase Client
-const supabaseUrl = 'https://xhosbwvwvpnctmprlaay.supabase.co';
-const supabaseKey = process.env.SUPABASE_KEY;
+// Koneksi supabase
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+
+if (!supabaseUrl || !supabaseKey) {
+    console.error("Error: Variabel SUPABASE_URL atau SUPABASE_SERVICE_ROLE_KEY tidak ditemukan di environment.");
+    process.exit(1);
+}
+
 const supabase = createClient(supabaseUrl, supabaseKey);
 
-// Konfigurasi penyimpanan file dengan Multer
+// Penyimpanan file multer
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
@@ -25,7 +31,7 @@ exports.getPortfolios = async (req, res) => {
 exports.getPortfolioById = async (req, res) => {
     const { id } = req.params;
     const { data, error } = await supabase.from('portfolios').select('*').eq('id', id).single();
-    if (error) return res.status(404).json({ message: 'Portfolio not found' });
+    if (error) return res.status(404).json({ message: 'Portfolio tidak ditemukan' });
     res.json(data);
 };
 
@@ -34,14 +40,14 @@ exports.createPortfolio = (req, res) => {
         if (err) return res.status(500).json({ error: err.message });
 
         const { eventName } = req.body;
-        if (!eventName) return res.status(400).json({ error: 'Event name is required' });
+        if (!eventName) return res.status(400).json({ error: 'Event name harus terisi' });
 
         if (!req.file) {
-            return res.status(400).json({ error: 'Image file is required' });
+            return res.status(400).json({ error: 'Image file harus terisi' });
         }
 
         try {
-            // Test koneksi database dengan query sederhana
+            // Test koneksi database
             const { data: testData, error: testError } = await supabase
                 .from('portfolios')
                 .select('*')
@@ -58,7 +64,6 @@ exports.createPortfolio = (req, res) => {
             const file = req.file;
             const fileName = `${Date.now()}_${file.originalname}`;
 
-            // Coba insert data tanpa upload file dulu
             const { data: insertData, error: insertError } = await supabase
                 .from('portfolios')
                 .insert([{ 
@@ -75,7 +80,6 @@ exports.createPortfolio = (req, res) => {
                 });
             }
 
-            // Jika insert berhasil, lanjut upload file
             const { data: uploadData, error: uploadError } = await supabase.storage
                 .from('gambar-event')
                 .upload(fileName, file.buffer, { 
@@ -91,7 +95,6 @@ exports.createPortfolio = (req, res) => {
                 });
             }
 
-            // Update record dengan URL file yang benar
             const { data: publicUrlData } = supabase.storage
                 .from('gambar-event')
                 .getPublicUrl(fileName);
@@ -111,14 +114,14 @@ exports.createPortfolio = (req, res) => {
             }
 
             res.status(201).json({ 
-                message: 'Portfolio created successfully',
+                message: 'Portfolio berhasil dibuat',
                 data: updateData
             });
 
         } catch (error) {
             console.error('Unexpected error:', error);
             res.status(500).json({ 
-                error: 'Unexpected error occurred',
+                error: 'Terjadi error tak terduga',
                 details: error.message
             });
         }
@@ -159,7 +162,7 @@ exports.updatePortfolio = (req, res) => {
             const { error } = await supabase.from('portfolios').update(updateData).eq('id', id);
             if (error) throw error;
 
-            res.json({ message: 'Portfolio updated successfully' });
+            res.json({ message: 'Portfolio berhasil diupdate' });
         } catch (dbError) {
             res.status(500).json({ error: dbError.message });
         }
@@ -171,7 +174,7 @@ exports.deletePortfolio = async (req, res) => {
     try {
         const { error } = await supabase.from('portfolios').delete().eq('id', id);
         if (error) throw error;
-        res.json({ message: 'Portfolio deleted successfully' });
+        res.json({ message: 'Portfolio berhasil dihapus' });
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
@@ -187,7 +190,7 @@ exports.getOrder = async (req, res) => {
 exports.getOrdersById = async (req, res) => {
     const { id } = req.params;
     const { data, error } = await supabase.from('orders').select('*').eq('id', id).single();
-    if (error) return res.status(404).json({ message: 'Order not found' });
+    if (error) return res.status(404).json({ message: 'Pesanan tidak ditemukan' });
     res.json(data);
 };
 
@@ -198,7 +201,7 @@ exports.createOrder = async (req, res) => {
             { name, email, subject, date, message, no_telepon, jenis_paket },
         ]);
         if (error) throw error;
-        res.status(201).json({ message: 'Order created successfully' });
+        res.status(201).json({ message: 'Pesanan berhasil dibuat' });
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
@@ -212,7 +215,7 @@ exports.updateOrder = async (req, res) => {
             name, email, subject, date, message, no_telepon, jenis_paket,
         }).eq('id', id);
         if (error) throw error;
-        res.json({ message: 'Order updated successfully' });
+        res.json({ message: 'Pesanan updated successfully' });
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
@@ -223,7 +226,7 @@ exports.deleteOrder = async (req, res) => {
     try {
         const { error } = await supabase.from('orders').delete().eq('id', id);
         if (error) throw error;
-        res.json({ message: 'Order deleted successfully' });
+        res.json({ message: 'Pesanan deleted successfully' });
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
@@ -233,18 +236,18 @@ exports.deleteOrder = async (req, res) => {
 exports.loginHandler = async (req, res) => {
     const { username, password } = req.body;
     const { data: admins, error } = await supabase.from('admins').select('*').eq('username', username);
-    if (error || admins.length === 0) return res.status(401).json({ message: 'Invalid username or password' });
+    if (error || admins.length === 0) return res.status(401).json({ message: 'Username atau Password Salah' });
 
     const admin = admins[0];
     const isMatch = await bcrypt.compare(password, admin.password);
-    if (!isMatch) return res.status(401).json({ message: 'Invalid username or password' });
+    if (!isMatch) return res.status(401).json({ message: 'Username atau Password Salah' });
 
     const token = jwt.sign({ id: admin.id, username: admin.username }, process.env.JWT_SECRET, { expiresIn: '1h' });
-    res.status(200).json({ message: 'Login successful', token });
+    res.status(200).json({ message: 'Login berhasil', token });
 };
 
 exports.logout = (req, res) => {
-    res.status(200).json({ message: "Logout successful" });
+    res.status(200).json({ message: "Logout berhasil" });
 };
 
 // Ekspor Semua Fungsi

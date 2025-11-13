@@ -1,8 +1,13 @@
 const { createClient } = require('@supabase/supabase-js');
 require('dotenv').config();
 
-const supabaseUrl = 'https://xhosbwvwvpnctmprlaay.supabase.co';
-const supabaseKey = process.env.SUPABASE_KEY;
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+
+if (!supabaseUrl || !supabaseKey) {
+    console.error("Error: SUPABASE_URL dan SUPABASE_ANON_KEY seharusnya ada di environment variables.");
+    process.exit(1); 
+}
 
 const supabase = createClient(supabaseUrl, supabaseKey, {
     auth: {
@@ -17,9 +22,9 @@ async function testConnection() {
         if (error) {
             throw error;
         }
-        console.log('Successfully connected to Supabase');
+        console.log('Berhasil terhubung ke Supabase');
     } catch (err) {
-        console.error('Error connecting to Supabase:', err.message);
+        console.error('Error saat terhubung ke Supabase:', err.message);
         process.exit(1);
     }
 }

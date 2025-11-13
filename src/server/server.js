@@ -4,49 +4,52 @@ const routes = require('./routes');
 const path = require('path');
 const session = require('express-session');
 const cors = require('cors');
-require('dotenv').config(); 
+require('dotenv').config();
 
 const app = express();
-const PORT = process.env.PORT || 4000; // Port server
+const PORT = process.env.PORT || 4000;
+const allowedOrigins = process.env.CORS_ALLOWED_ORIGINS ?
+  process.env.CORS_ALLOWED_ORIGINS.split(',') :
+  [];
 
-// Middleware untuk mengizinkan CORS
+// CORS
 app.use(
   cors({
-    origin: ['https://backend-dsnap.vercel.app/', 'https://snapsindo.vercel.app/'], 
+    origin: allowedOrigins, 
     methods: ['GET', 'POST', 'PUT', 'DELETE'], 
     allowedHeaders: ['Content-Type', 'Authorization'], 
     credentials: true, 
   })
 );
 
-// Middleware untuk parsing body JSON
+// JSOn body parser
 app.use(bodyParser.json());
 
-// Middleware untuk parsing body URL-encoded
+// Decode url body
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Middleware untuk melayani file statis
+// File static buat upload
 app.use('/uploads', express.static(path.join(__dirname, '../../uploads')));
 
-// Middleware untuk session
+// Session login
 app.use(
   session({
-    secret: process.env.SESSION_SECRET || 'your_secret_key', // Kunci session
+    secret: process.env.SESSION_SECRET || 'your_secret_key',
     resave: false,
     saveUninitialized: true,
-    cookie: { secure: false }, // Set ke `true` jika menggunakan HTTPS
+    cookie: { secure: false },
   })
 );
 
 // Routes
 app.use('/api', routes);
 
-// Middleware untuk menangani rute yang tidak ditemukan
+// Route not found handler
 app.use((req, res, next) => {
-  res.status(404).json({ message: 'Route not found' });
+  res.status(404).json({ message: 'Route tidak ditemukan' });
 });
 
-// Middleware untuk menangani error
+// Error handler
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).json({ message: 'Internal server error', error: err.message });
@@ -54,5 +57,5 @@ app.use((err, req, res, next) => {
 
 // Start server
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  console.log(`Server berjalan pada ${PORT}`);
 });
