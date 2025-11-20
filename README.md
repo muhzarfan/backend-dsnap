@@ -172,7 +172,7 @@ Authorization: Bearer <token>
 **Response**
 ```json
 {
-    "message": "Portfolio berhasil diupdate",
+    "message": "Portfolio berhasil diubah",
     "data": [
         {
             "id": 1,
@@ -299,7 +299,7 @@ Authorization: Bearer <token>
 **Response**
 ```json
 {
-    "message": "Pesanan berhasil diupdate"
+    "message": "Pesanan berhasil diubah"
 }
 ```
 
