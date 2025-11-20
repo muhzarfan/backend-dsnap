@@ -3,6 +3,7 @@ require('dotenv').config();
 const multer = require('multer');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
+const authMiddleware = require('./authMiddleware');
 
 console.log('Handler module loaded');
 
@@ -11,8 +12,8 @@ const supabaseUrl = process.env.SUPABASE_URL
 const supabaseKey = process.env.SUPABASE_SERVICE_KEY;
 
 if (!supabaseUrl || !supabaseKey) {
-    console.error("Error: SUPABASE_URL dan SUPABASE_SERVICE_KEY seharusnya ada di environment variables.");
-    process.exit(1); 
+    console.error("Error: SUPABASE_URL dan SUPABASE_SERVICE_KEY seharusnya ada di environment variables.");
+    process.exit(1);
 }
 
 const supabase = createClient(supabaseUrl, supabaseKey);
@@ -287,7 +288,6 @@ exports.logout = (req, res) => {
     res.status(200).json({ message: "Logout berhasil" });
 };
 
-// Ekspor Semua Fungsi
 module.exports = {
     getPortfolios: exports.getPortfolios,
     getPortfolioById: exports.getPortfolioById,
@@ -301,9 +301,6 @@ module.exports = {
     deleteOrder: exports.deleteOrder,
     loginHandler: exports.loginHandler,
     logout: exports.logout,
+    authMiddleware: authMiddleware,
 };
-
-
-
-
 
