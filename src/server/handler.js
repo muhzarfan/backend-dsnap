@@ -199,7 +199,7 @@ exports.updatePortfolio = (req, res) => {
             const { error } = await supabase.from('portfolios').update(updateData).eq('id', id);
             if (error) throw error;
 
-            res.json({ message: 'Portfolio berhasil diupdate' });
+            res.json({ message: 'Portfolio berhasil diubah' });
         } catch (dbError) {
             res.status(500).json({ error: dbError.message });
         }
@@ -252,7 +252,7 @@ exports.updateOrder = async (req, res) => {
             name, email, subject, date, message, no_telepon, jenis_paket,
         }).eq('id', id);
         if (error) throw error;
-        res.json({ message: 'Pesanan berhasil diupdate' });
+        res.json({ message: 'Pesanan berhasil diubah' });
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
@@ -263,7 +263,7 @@ exports.deleteOrder = async (req, res) => {
     try {
         const { error } = await supabase.from('orders').delete().eq('id', id);
         if (error) throw error;
-        res.json({ message: 'Pesanan deleted successfully' });
+        res.json({ message: 'Pesanan berhasil dihapus' });
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
@@ -302,6 +302,7 @@ module.exports = {
     loginHandler: exports.loginHandler,
     logout: exports.logout,
 };
+
 
 
 
