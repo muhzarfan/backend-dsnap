@@ -252,7 +252,7 @@ exports.updateOrder = async (req, res) => {
             name, email, subject, date, message, no_telepon, jenis_paket,
         }).eq('id', id);
         if (error) throw error;
-        res.json({ message: 'Pesanan updated successfully' });
+        res.json({ message: 'Pesanan berhasil diupdate' });
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
@@ -302,6 +302,7 @@ module.exports = {
     loginHandler: exports.loginHandler,
     logout: exports.logout,
 };
+
 
 
 
