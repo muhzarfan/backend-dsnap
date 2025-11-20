@@ -1,6 +1,6 @@
 # 🤝 Backend Website DSNAP
 
-Repositori ini merupakan REST API untuk website DSNAP. DSNAP adalah perusahaan yang menyediakan jasa event organizer. Untuk melihat lebih lanjut informasi tentang perusahaan ini dapat mengakses link [Website DSNAP](https://snapsindo.vercel.app/). Website ini menyediakan fitur lihat informasi jasa yang ditawarkan dan pemesanan serta CRUD bagi admin untuk mengelola project/portfolio dan pemesanan dari klien.
+Repositori ini merupakan REST API untuk website DSNAP. DSNAP adalah perusahaan yang menyediakan jasa event organizer. Untuk melihat lebih lanjut informasi tentang perusahaan ini dapat mengakses link [Website DSNAP](https://snapsindo.vercel.app/). Website ini menyediakan fitur lihat informasi jasa yang ditawarkan dan pemesanan serta CRUD bagi admin untuk mengelola project/portfolio dan pemesanan dari klien. Website DSNAP juga tersedia Chatbot untuk tanya jawab seputar informasi DSNAP.
 
 ## Software yang Digunakan
 - **Node.js**  
