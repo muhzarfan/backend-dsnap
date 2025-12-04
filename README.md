@@ -1,13 +1,13 @@
 # 🤝 Backend Website DSNAP
 
-Repositori ini berisi **REST API** untuk website DSNAP. DSNAP adalah perusahaan yang menyediakan layanan event organizer. Website ini memiliki fitur untuk melihat informasi layanan, melakukan pemesanan, serta menyediakan panel admin untuk mengelola portfolio dan pesanan. Tersedia juga fitur **Chatbot** untuk menjawab pertanyaan seputar DSNAP.
+Repositori ini berisi **REST API** untuk website DSNAP. DSNAP adalah perusahaan yang menyediakan layanan event organizer. Website ini memiliki fitur untuk melihat informasi layanan, melakukan pemesanan, serta menyediakan panel admin untuk mengelola portfolio dan pesanan. Website ini juga dilengkapi **Chatbot** untuk menjawab pertanyaan seputar DSNAP.
 
 ---
 
 ## 💻 Software yang Digunakan
 - **Node.js**
 - **Express.js**
-- **PostgreSQL** (via **Supabase**)
+- **PostgreSQL** (Supabase)
 
 ---
 
@@ -41,7 +41,7 @@ http://localhost:4000
 ---
 
 ## 🔑 Autentikasi
-Sebagian besar endpoint (khusus Admin) membutuhkan **JWT Token**.
+Sebagian besar endpoint Admin membutuhkan **JWT Token**.
 
 Header:
 ```
@@ -55,14 +55,14 @@ Authorization: Bearer <token>
 # 1. Login / Logout Admin
 
 ### POST /api/login — Publik
-**Body**
+Body:
 ```json
 {
   "username": "johndoe",
   "password": "password123"
 }
 ```
-**Response**
+Response:
 ```json
 {
   "message": "Login berhasil",
@@ -70,8 +70,8 @@ Authorization: Bearer <token>
 }
 ```
 
-### POST /api/logout — Publik
-**Response**
+### POST /api/logout — Publik (Penghapusan token dilakukan pada Frontend)
+Response:
 ```json
 {
   "message": "Logout berhasil"
@@ -102,7 +102,7 @@ Authorization: Bearer <token>
 }
 ```
 
-### POST /api/portfolio — Admin Only  
+### POST /api/portfolio — Admin Only
 Header:
 ```
 Authorization: Bearer <token>
@@ -112,15 +112,38 @@ Body (multipart/form-data):
 eventName: "Judul Event"
 imageUrl: file gambar
 ```
+Response:
+```json
+{
+  "message": "Portfolio berhasil dibuat",
+  "data": {
+    "id": 2,
+    "eventName": "Judul Event",
+    "imageUrl": "https://link-gambar.com/nama-file.jpg"
+  }
+}
+```
 
-### PUT /api/portfolio/:id — Admin Only  
+### PUT /api/portfolio/:id — Admin Only
 Body:
 ```
 eventName: "Nama Baru"
 imageUrl: file (opsional)
 ```
+Response:
+```json
+{
+  "message": "Portfolio berhasil diubah"
+}
+```
 
 ### DELETE /api/portfolio/:id — Admin Only
+Response:
+```json
+{
+  "message": "Portfolio berhasil dihapus"
+}
+```
 
 ---
 
@@ -141,8 +164,20 @@ imageUrl: file (opsional)
 ```
 
 ### GET /api/order/:id — Admin Only
+```json
+{
+  "id": 1,
+  "name": "ABC",
+  "email": "abcindonesia@gmail.com",
+  "subject": "ABC x Bigbang Festival",
+  "date": "2025-01-30T00:00:00+00:00",
+  "message": "Event activation project",
+  "no_telepon": "08123456789",
+  "jenis_paket": "Medium"
+}
+```
 
-### POST /api/order — Publik  
+### POST /api/order — Publik
 Body:
 ```json
 {
@@ -155,16 +190,47 @@ Body:
   "jenis_paket": "Medium"
 }
 ```
+Response:
+```json
+{
+  "message": "Pesanan berhasil dibuat",
+  "id": 4
+}
+```
 
 ### PUT /api/order/:id — Admin Only
+Body:
+```json
+{
+  "name": "Abah Zhongli Morax",
+  "email": "morax@gmail.com",
+  "subject": "Lantern Rite Festival",
+  "date": "2025-11-20",
+  "message": "Update detail acara",
+  "no_telepon": "08123456789",
+  "jenis_paket": "Large"
+}
+```
+Response:
+```json
+{
+  "message": "Pesanan berhasil diubah"
+}
+```
 
 ### DELETE /api/order/:id — Admin Only
+Response:
+```json
+{
+  "message": "Pesanan berhasil dihapus"
+}
+```
 
 ---
 
 # 4. Chatbot
 
-### POST /api/chatbot — Publik  
+### POST /api/chatbot — Publik
 Body:
 ```json
 {
