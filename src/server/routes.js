@@ -2,7 +2,7 @@ const express = require('express');
 const handler = require('./handler');
 const ChatbotHandler = require('./ChatbotHandler');
 const router = express.Router();
-const { validateOrder, validatePortfolio } = require('./validator');
+const { validateOrder, validatePortfolio } = require('../validator/validator');
 const chatbotHandler = new ChatbotHandler();
 
 // == MIDDLEWARE VALIDASI ==
